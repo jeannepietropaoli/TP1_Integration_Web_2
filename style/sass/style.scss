@@ -124,3 +124,58 @@ button:hover a {
 footer {
    
 }
+
+/* gallery */
+
+.gallery {
+    margin: auto;
+    width: 80%;
+    height: 450px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.gallery__slider {
+    width: calc(100% * 3);
+    height: 100%;
+    display: inline-block;
+    animation: sliding 10s linear infinite forwards;
+}
+
+.gallery__img {
+    width: calc(100% / 3);
+    height: 100%;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    58% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    66% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    91% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}

@@ -115,3 +115,50 @@ button:hover a {
 }
 
 /* footer */
+/* gallery */
+.gallery {
+  margin: auto;
+  width: 80%;
+  height: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.gallery__slider {
+  width: 300%;
+  height: 100%;
+  display: inline-block;
+  animation: sliding 10s linear infinite forwards;
+}
+
+.gallery__img {
+  width: 33.3333333333%;
+  height: 100%;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+@keyframes sliding {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-33.3333333333%);
+  }
+  58% {
+    transform: translateX(-33.3333333333%);
+  }
+  66% {
+    transform: translateX(-66.6666666667%);
+  }
+  91% {
+    transform: translateX(-66.6666666667%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
