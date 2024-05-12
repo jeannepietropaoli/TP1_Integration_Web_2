@@ -146,8 +146,13 @@ footer {
     width: calc(100% / 3);
     height: 100%;
     object-fit: cover;
+    object-position: center;
     padding: 10px;
     border-radius: 15px;
+}
+
+.gallery__img--position-bottom {
+    object-position: bottom;
 }
 
 @keyframes sliding {

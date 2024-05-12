@@ -135,8 +135,13 @@ button:hover a {
   width: 33.3333333333%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   padding: 10px;
   border-radius: 15px;
+}
+
+.gallery__img--position-bottom {
+  object-position: bottom;
 }
 
 @keyframes sliding {
