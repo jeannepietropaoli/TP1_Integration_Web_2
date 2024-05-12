@@ -71,6 +71,22 @@ button:hover a {
   color: white;
 }
 
+/* section */
+section {
+  position: relative;
+}
+
+section::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: rgb(255, 105, 180);
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* header */
 .header {
   display: flex;
@@ -142,6 +158,25 @@ button:hover a {
 
 .carousel__img--position-bottom {
   object-position: bottom;
+}
+
+/* newsletter */
+.newsletter {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.newsletter__form {
+  display: flex;
+}
+
+.newsletter__input {
+  padding: 5px 10px;
+}
+
+.newsletter__label {
+  display: none;
 }
 
 @keyframes sliding {
