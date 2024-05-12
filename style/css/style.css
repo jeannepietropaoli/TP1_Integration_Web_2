@@ -115,8 +115,8 @@ button:hover a {
 }
 
 /* footer */
-/* gallery */
-.gallery {
+/* carousel d'images */
+.carousel {
   margin: auto;
   width: 80%;
   height: 450px;
@@ -124,14 +124,14 @@ button:hover a {
   overflow: hidden;
 }
 
-.gallery__slider {
+.carousel__slider {
   width: 300%;
   height: 100%;
   display: inline-block;
   animation: sliding 10s linear infinite forwards;
 }
 
-.gallery__img {
+.carousel__img {
   width: 33.3333333333%;
   height: 100%;
   object-fit: cover;
@@ -140,7 +140,7 @@ button:hover a {
   border-radius: 15px;
 }
 
-.gallery__img--position-bottom {
+.carousel__img--position-bottom {
   object-position: bottom;
 }
 

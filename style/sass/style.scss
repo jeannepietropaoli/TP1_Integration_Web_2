@@ -125,9 +125,9 @@ footer {
    
 }
 
-/* gallery */
+/* carousel d'images */
 
-.gallery {
+.carousel {
     margin: auto;
     width: 80%;
     height: 450px;
@@ -135,14 +135,14 @@ footer {
     overflow: hidden;
 }
 
-.gallery__slider {
+.carousel__slider {
     width: calc(100% * 3);
     height: 100%;
     display: inline-block;
     animation: sliding 10s linear infinite forwards;
 }
 
-.gallery__img {
+.carousel__img {
     width: calc(100% / 3);
     height: 100%;
     object-fit: cover;
@@ -151,7 +151,7 @@ footer {
     border-radius: 15px;
 }
 
-.gallery__img--position-bottom {
+.carousel__img--position-bottom {
     object-position: bottom;
 }
 
