@@ -193,6 +193,19 @@ footer {
     display: none;
 }
 
+/* section offres speciales */
+
+.special-offer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+}
+
+.special-offer__text {
+    flex-grow: 1;
+}
+
 @keyframes sliding {
     0% {
         transform: translateX(0);
