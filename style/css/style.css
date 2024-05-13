@@ -291,6 +291,46 @@ section::after {
   font-weight: 800;
 }
 
+/* section equipe */
+.team {
+  text-align: center;
+}
+
+.team__text {
+  width: 50%;
+  margin: auto;
+}
+
+.team__cards {
+  display: flex;
+  gap: 24px;
+  text-align: initial;
+}
+
+.person-card {
+  flex: 1 1 0;
+  position: relative;
+}
+
+.person-card::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: lightgrey;
+  top: 0;
+  right: -12px;
+}
+
+.person-card:last-child::after {
+  width: 0px;
+}
+
+.person-card__img {
+  width: 50%;
+  border-radius: 10px;
+}
+
 @keyframes sliding {
   0% {
     transform: translateX(0);
