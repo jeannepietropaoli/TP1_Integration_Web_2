@@ -242,6 +242,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: 1fr;
+    aspect-ratio: 2/1;  // grid-auto-rows: 1fr et aspcet-ratio: 2/1 permettent d'obtenir la grille du modele sans retoucher le ratio des photos a l'avance
     gap: 15px;
 }
 
@@ -266,7 +267,6 @@ footer {
 
 .gallery__img:nth-child(4) {
     grid-area: 11 / 4 / 21 / 7;
-    object-position: bottom;
 }
 
 .gallery__img:nth-child(5) {

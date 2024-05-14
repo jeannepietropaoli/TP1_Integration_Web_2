@@ -225,6 +225,7 @@ section::after {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   grid-auto-rows: 1fr;
+  aspect-ratio: 2/1;
   gap: 15px;
 }
 
@@ -249,7 +250,6 @@ section::after {
 
 .gallery__img:nth-child(4) {
   grid-area: 11/4/21/7;
-  object-position: bottom;
 }
 
 .gallery__img:nth-child(5) {
@@ -353,4 +353,4 @@ section::after {
   100% {
     transform: translateX(-100%);
   }
-}
+}/*# sourceMappingURL=style.css.map */
