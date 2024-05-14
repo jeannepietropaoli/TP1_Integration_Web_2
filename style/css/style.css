@@ -331,6 +331,54 @@ section::after {
   border-radius: 10px;
 }
 
+/* section contact / formulaire */
+#contact {
+  position: relative;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.form {
+  margin-left: auto;
+  background-color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 30px;
+  gap: 15px;
+}
+
+.form__text {
+  margin: 0;
+}
+
+.form__label--hidden {
+  display: none;
+}
+
+.form__name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__input--50 {
+  width: 45%;
+}
+
+.form__textarea {
+  height: 100px;
+}
+
 @keyframes sliding {
   0% {
     transform: translateX(0);
