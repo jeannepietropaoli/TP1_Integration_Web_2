@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +29,7 @@
         </div>
     </header>
     <main>
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="carousel">
                     <!-- le doublon gallery__slider permet de creer l'effet de defilement infini des images de la galerie -->
@@ -47,7 +47,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="newsletter">
                     <p class="newsletter__text">Tu veux rejoindre notre newsletter et etre au courant des dernieres noveates ?</p>
@@ -60,7 +60,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="special-offer">
                     <p class="special-offer__text">
@@ -71,7 +71,7 @@
             </div>
         </section>
         
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="introduction">
                     <h1 class="introduction__title">Medailles Alpine</h1>
@@ -99,7 +99,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <div class="container">
                
                 <div class="gallery">
@@ -113,7 +113,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="stats">
                     <img class="stats__graph" src="assets/stats.png" alt="">
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="section">
             <div class="container">
                 <div class="team">
                     <h2 >Notre equipe</h2>
@@ -182,28 +182,62 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section class="section" id="contact">
             <div class="container">
                 <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form class="form" action="" onsubmit="return validateForm()" novalidate>
+                <form id="form" class="form" onsubmit="return validateForm()" novalidate>
                     <h3>Contact</h3>
                     <p class="form__text">Des questions ? Laissez-nous un message, nous reviendrons vers vous entre 2 medailles !</p>
 
                     <div class="form__name">
-                        <label class="form__label form form__label--hidden" for="lastName">Nom de famille</label>
-                        <input class="form__input form__input--50" id="lastName" type="text" placeholder="Nom de famille">
-                        <label class="form__label form__label--hidden" for="firstName">Prenom</label>
-                        <input class="form__input form__input--50" id="firstName" type="text" placeholder="Prenom">
+                        <div class="form__input-control">
+                            <label class="form__label form__label--hidden" for="lastName">Nom de famille</label>
+                            <input class="form__input form__input--50" id="lastName" type="text" placeholder="Nom de famille">
+                            <div class="form__error-msg"></div>
+                        </div>
+                        <div class="form__input-control">
+                            <label class="form__label form__label--hidden" for="firstName">Prenom</label>
+                            <input class="form__input form__input--50" id="firstName" type="text" placeholder="Prenom">
+                            <div class="form__error-msg"></div>
+                        </div>
                     </div>
 
-                    <label class="form__label form__label--hidden" for="email">Email</label>
-                    <input class="form__input" id="email" type="email" placeholder="Email">
+                    <div class="form__input-control">
+                        <label class="form__label form__label--hidden" for="email">Email</label>
+                        <input class="form__input" id="email" type="email" placeholder="Email">
+                        <div class="form__error-msg"></div>
+                    </div>
 
-                    <label class="form__label form__label--hidden" for="message">Message</label>
-                    <textarea class="form__textarea" id="message" type="text" placeholder="Message"></textarea>
+                    <div class="form__input-control">
+                        <label class="form__label form__label--hidden" for="message">Message</label>
+                        <textarea class="form__textarea form__input" id="message" type="text" placeholder="Message"></textarea>
+                        <div class="form__error-msg"></div>
+                    </div>
                         
                     <button class="form__button" type="submit">Envoyer</button>
                 </form>
+            </div>
+        </section>
+
+        <section class="section section--light-border">
+            <div class="container footer-top">
+                <img class="footer-top__logo" src="assets/logo.png" alt="Logo de la marque">
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item"><a href="">A propos</a></li>
+                        <li class="footer-nav__item"><a href="">Modeles</a></li>
+                        <li class="footer-nav__item"><a href="">Sur mesure</a></li>
+                        <li class="footer-nav__item"><a href="">FAQs</a></li>
+                        <li class="footer-nav__item"><a href="">Engagement</a></li>
+                        <li class="footer-nav__item"><a href="">Revendeurs</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <section class="section section--no-border">
+            <div class="container">
+
             </div>
         </section>
 
