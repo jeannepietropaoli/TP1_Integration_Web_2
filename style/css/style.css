@@ -73,11 +73,11 @@ button:hover a {
 }
 
 /* section */
-section {
+.section {
   position: relative;
 }
 
-section::after {
+.section::after {
   position: absolute;
   content: "";
   width: 80%;
@@ -86,6 +86,14 @@ section::after {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.section--light-border::after {
+  background-color: red;
+}
+
+.section--light-border::after {
+  height: 0;
 }
 
 /* header */
@@ -368,15 +376,36 @@ section::after {
 
 .form__name {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  gap: 5%;
 }
 
-.form__input--50 {
-  width: 45%;
+.form__input-control {
+  width: 100%;
+  flex: 1 1 0;
+}
+
+.form__input {
+  width: 100%;
+  border: 1px solid black;
 }
 
 .form__textarea {
   height: 100px;
+}
+
+.form__input--success {
+  border-color: green;
+}
+
+.form__input--error {
+  border-color: red;
+}
+
+.form__error-msg {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 3px;
 }
 
 @keyframes sliding {
