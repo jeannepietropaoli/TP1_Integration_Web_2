@@ -428,6 +428,27 @@ footer {
     margin-top: 3px;
 }
 
+/* navigation de bas de page */
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top__logo {
+    background-color: grey;
+    padding: 0 30px;
+    height: 100px;
+    margin: auto;
+}
+
+.footer-nav__list {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 22px;
+    width: clamp(400px, 80%, 750px);
+}
 
 @keyframes sliding {
     0% {
