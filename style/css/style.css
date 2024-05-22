@@ -429,6 +429,35 @@ button:hover a {
   width: clamp(400px, 80%, 750px);
 }
 
+/* footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__icon {
+  height: 25px;
+  margin-right: 8px;
+}
+
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+
+.footer__item--centered {
+  justify-self: center;
+}
+
+.footer__link,
+.footer__item {
+  font-size: 0.75rem;
+}
+
+.footer__link {
+  margin-right: 12px;
+}
+
 @keyframes sliding {
   0% {
     transform: translateX(0);
