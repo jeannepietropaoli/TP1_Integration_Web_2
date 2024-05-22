@@ -94,10 +94,10 @@ button:hover a {
 }
 
 .section--light-border::after {
-    background-color: red;
+    background-color: lightgrey;
 }
 
-.section--light-border::after {
+.section--no-border::after {
     height: 0;
 }
   
@@ -144,12 +144,6 @@ button:hover a {
 
 .nav--mobile {
     display: none;
-}
-
-/* footer */
-  
-footer {
-   
 }
 
 /* carousel d'images */
