@@ -6,48 +6,49 @@
     <title>Médailles Alpine</title>
     <link rel="stylesheet" href="style/css/style.css">
     <script src="formValidation.js" defer></script>
+    <script src="menu-burger.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="header" class="section section--light-padding">
         <div class="container header">
             <a class="header__home-link" href="index.html">
                 ALPINE
             </a>
             <nav class="nav nav--desktop">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--current" href="#">Concept</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Galerie</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Notre équipe</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--current" href="#introduction">Concept</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#gallery">Galerie</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#team">Notre équipe</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <nav class="nav--mobile">
+            <nav class="nav--mobile-burger">
                 <button class="nav__burger-button">
-                    <img class="nav__burger-img" src="assets/burger_button.png" alt="bouton acces menu mobile">
+                    <img class="nav__burger-img" src="assets/hamburger.png" alt="bouton acces menu mobile">
                 </button>
             </nav>
         </div>
     </header>
     <main>
-        <section class="section">
+        <section id="carousel" class="section">
             <div class="container">
                 <div class="carousel">
                     <!-- le doublon gallery__slider permet de creer l'effet de defilement infini des images de la galerie -->
                     <div class="carousel__slider">
                         <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.webp" alt="Photo bac rempli de medailles" class="carousel__img">
+                        <img src="assets/banner2.jpg" alt="Photo bac rempli de medailles" class="carousel__img">
                         <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick porte" class="carousel__img carousel__img--position-bottom">
                     </div>
                     <div class="carousel__slider">
                         <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.webp" alt="Photo bac rempli de medailles" class="carousel__img">
+                        <img src="assets/banner2.jpg" alt="Photo bac rempli de medailles" class="carousel__img">
                         <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick porte" class="carousel__img carousel__img--position-bottom">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section id="newsletter" class="section section--border-top">
             <div class="container">
                 <div class="newsletter">
                     <p class="newsletter__text">Tu veux rejoindre notre newsletter et etre au courant des dernieres noveates ?</p>
@@ -60,18 +61,18 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="special-offer" class="section">
             <div class="container">
                 <div class="special-offer">
                     <p class="special-offer__text">
                        Concours a l'occasion de la nouvelle collection de Medailles Alpine: devine la forme du nouveau modele et tente de le gagner avec le prenom de ton chien !
                     </p>
-                    <button>M'inscrire</button>
+                    <button class="button--text-light special-offer__btn">M'inscrire</button>
                 </div>
             </div>
         </section>
         
-        <section class="section">
+        <section id="introduction" class="section">
             <div class="container">
                 <div class="introduction">
                     <h1 class="introduction__title">Medailles Alpine</h1>
@@ -80,17 +81,17 @@
                     </p>
                     <div class="introduction__cards">
                         <article class="card">
-                            <img class="card__img" src="assets/artisanat.png" alt="">
+                            <img class="card__img" src="assets/fait-main.png" alt="">
                             <h3 class="card__title">Fait a la main au Quebec</h3>
-                            <p>Nos medailles nsont entierement faites a la main de facon artisnale a Quebec. Tu cherches un produit local avec un savoir-faire en arriere ? Ne cherche pas plus loin</p>
+                            <p>Nos medailles nsont entierement faites a la main de facon artisnale a Quebec. Tu cherches un produit <span class="highlight highlight-orange">local</span> avec un savoir-faire en arriere ? Ne cherche pas plus loin</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/custom.png" alt="">
+                            <img class="card__img" src="assets/choix.png" alt="">
                             <h3 class="card__title">Sur mesure</h3>
                             <p>Choisis parmis nos dizaines de modeles prefaits, customize avec ton choix de police, de couleur et forme de medailles, de couleur d'encre. Psst: toujours pas satisfait ? Shoot nous un message pour demander une medailles custom !</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/qualite.png" alt="">
+                            <img class="card__img" src="assets/garanti.png" alt="">
                             <h3 class="card__title">Unique et durable</h3>
                             <p>Estampees a la main et fabriquees avec des materiaux de qualite, nos medailles sont toutes uniques de par le procede et durables dans le temps.</p>
                         </article>
@@ -99,9 +100,8 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="gallery" class="section">
             <div class="container">
-               
                 <div class="gallery">
                     <img class="gallery__img" src="assets/gallery/gallery_photo_1.jpg" alt="">
                     <img class="gallery__img" src="assets/gallery/gallery_photo_2.jpg" alt="">
@@ -109,11 +109,15 @@
                     <img class="gallery__img" src="assets/gallery/gallery_photo_4.jpg" alt="">
                     <img class="gallery__img" src="assets/gallery/gallery_photo_5.jpg" alt="">
                     <img class="gallery__img" src="assets/gallery/gallery_photo_6.jpg" alt="">
+                    <div class="gallery__ornament"></div>
+                    <div class="gallery__ornament"></div>
+                    <div class="gallery__ornament"></div>
+                    <div class="gallery__ornament"></div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section id="stats" class="section">
             <div class="container">
                 <div class="stats">
                     <img class="stats__graph" src="assets/stats.png" alt="">
@@ -130,13 +134,13 @@
                                 <div>De clients satisfaits</div>
                             </div>
                         </div>
-                        <button class="stats__button">En savoir plus</button>
+                        <button class="stats__button button--text-light">En savoir plus</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <section id="team" class="section">
             <div class="container">
                 <div class="team">
                     <h2 >Notre equipe</h2>
@@ -214,48 +218,45 @@
                         <div class="form__error-msg"></div>
                     </div>
                         
-                    <button class="form__button" type="submit">Envoyer</button>
+                    <button class="form__button button button--text-dark" type="submit">Envoyer</button>
                 </form>
             </div>
         </section>
-
-        <section class="section section--light-border">
-            <div class="container footer-top">
-                <img class="footer-top__logo" src="assets/logo.png" alt="Logo de la marque">
-                <nav class="footer-nav">
-                    <ul class="footer-nav__list">
-                        <li class="footer-nav__item"><a href="">A propos</a></li>
-                        <li class="footer-nav__item"><a href="">Modeles</a></li>
-                        <li class="footer-nav__item"><a href="">Sur mesure</a></li>
-                        <li class="footer-nav__item"><a href="">FAQs</a></li>
-                        <li class="footer-nav__item"><a href="">Engagement</a></li>
-                        <li class="footer-nav__item"><a href="">Revendeurs</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </section>
-
-        <footer class="section section--no-border">
-            <div class="container footer">
-                <p class="footer__item">Fait par: Jeanne Pietropaoli</p>
-                <div class="footer__item footer__item--centered">
-                    <ul class="footer__social-networks-list">
-                        <img class="footer__icon" src="assets/facebook.png" alt="">
-                        <img class="footer__icon" src="assets/twitter.png" alt="">
-                        <img class="footer__icon" src="assets/instagram.png" alt="">
-                        <img class="footer__icon" src="assets/linkedin.png" alt="">
-                    </ul>
-                </div>
-                <address class="footer__item">
-                    <img class="footer__icon" src="assets/mobile.png" alt="">
-                    <a class="footer__link" href="tel:+5819988915">+581-998-8915</a>
-                    <img class="footer__icon" src="assets/mail.png" alt="">
-                    <a class="footer__link" href="mailto:medaillesalpine@gmail.com">mediallesalpine@gmail.com</a>
-                </address>
-            </div>
-        </footer>
-
     </main>
-    <footer></footer>
+    <section id="footer-top" class="section">
+        <div class="container footer-top">
+            <img class="footer-top__logo" src="assets/logo.png" alt="Logo de la marque">
+            <nav class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item"><a href="">A propos</a></li>
+                    <li class="footer-nav__item"><a href="">Modeles</a></li>
+                    <li class="footer-nav__item"><a href="">Sur mesure</a></li>
+                    <li class="footer-nav__item"><a href="">FAQs</a></li>
+                    <li class="footer-nav__item"><a href="">Engagement</a></li>
+                    <li class="footer-nav__item"><a href="">Revendeurs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <footer id="footer" class="section section--no-border">
+        <div class="container footer">
+            <p class="footer__item">Fait par: Jeanne Pietropaoli</p>
+            <div class="footer__item footer__item--centered">
+                <ul class="footer__social-networks-list">
+                    <img class="footer__icon" src="assets/facebook.png" alt="">
+                    <img class="footer__icon" src="assets/twitter.png" alt="">
+                    <img class="footer__icon" src="assets/instagram.png" alt="">
+                    <img class="footer__icon" src="assets/linkedin.png" alt="">
+                </ul>
+            </div>
+            <address class="footer__item">
+                <img class="footer__icon" src="assets/mobile.png" alt="">
+                <a class="footer__link" href="tel:+5819988915">+581-998-8915</a>
+                <img class="footer__icon" src="assets/mail.png" alt="">
+                <a class="footer__link" href="mailto:medaillesalpine@gmail.com">mediallesalpine@gmail.com</a>
+            </address>
+        </div>
+    </footer>
 </body>
 </html>
