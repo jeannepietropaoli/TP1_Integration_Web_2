@@ -32,7 +32,6 @@ Le but est de créer un site web de type **page unique** pour l'entreprise de no
 
 * ### Palette de couleurs :
 
-à venir...
 
 ## Technologies utilisées
 
