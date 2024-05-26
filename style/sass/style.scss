@@ -4,14 +4,21 @@
 /* general */
 
 $pink: rgb(255, 126, 52);
-$green: rgb(0, 240, 148);
+$green: #00f094;
 $blue: #384d4b;
 $dark-green: rgb(56, 77, 75);
+$forest-green: rgb(17 33 33);
 $grey: #e4e4e4;
+$transparent-white: rgba(255,255,255,0.8);
 
 * {
     box-sizing: border-box;
     font-family: "Dosis", sans-serif;
+}
+
+/* permet de decaler le scroll la section afin que rien ne soit cache par le header lorsqu'on clique sur les liens des sections */
+html {
+    scroll-padding-top: 75px;
 }
 
 body {
@@ -24,12 +31,16 @@ body {
 }
 
 main {
-    flex-grow: 1;
+    flex: 1 1 0;
     display: flex;
     flex-direction: column;
 }
+
+main > section {
+    flex: 1 1 0;
+}
   
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     font-weight: 700;
     margin: 0;
     font-family: "Roboto Mono", monospace;
@@ -63,6 +74,14 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px clamp(30px, 5%, 50px);
+}
+
+.no-top-margin {
+    margin-top: 0;
+}
+
+.social-icon {
+    cursor: pointer;
 }
 
 /* boutons */
@@ -114,17 +133,6 @@ button:hover a {
     transform: translateX(-50%);
 }
 
-.section--border-top::before {
-    position: absolute;
-    content: "";
-    width: 80%;
-    height: 4px;
-    background-color: $green;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .section--light-border::after {
     background-color: lightgrey;
 }
@@ -136,17 +144,32 @@ button:hover a {
 /* header */
 
 #header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__home-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__logo {
+    height: 35px;
+}
+
+.header__branding {
+    display: flex;
+    gap: 20px;
 }
 
 /* header - right part : nav bar */
@@ -189,7 +212,7 @@ button:hover a {
 .nav--mobile {
     color: white;
     animation: blend 400ms ease-in-out;
-    position: fixed;
+    position: sticky;
     top: 0;
     bottom: 0;
     left: 0;
@@ -221,8 +244,6 @@ button:hover a {
 #carousel {
     background: url(../../assets/backgrounds/bg2.jpg);
     background-size: cover;
-    position: relative;
-    top: 38px;
 }
 
 .carousel {
@@ -323,9 +344,10 @@ button:hover a {
     z-index: 1;
 }
 
-.introduction__title::after {
+.introduction__title::before {
     content: "";
     width: 120%;
+    max-width: 95vw;
     height: 90%;
     background-color: $green;
     position: absolute;
@@ -343,13 +365,16 @@ button:hover a {
     margin-left: auto;
     margin-right: auto;
     color: white;
+
 }
 
 .introduction__text::after {
     content: "";
     width: 120%;
+    max-width: 95vw;
     height: 120%;
     background-color: $dark-green;
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -366,7 +391,7 @@ button:hover a {
 .introduction__cards .card {
     padding: 30px;
     border-radius: 10px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: $transparent-white;
     flex: 1 1 0px;
 }
 
@@ -447,7 +472,7 @@ button:hover a {
 /* section statistiques */
 
 #stats {
-    background: url(../../assets//backgrounds/bg2.jpg);
+    background: url(../../assets//backgrounds/bg2reversedark.jpg);
     background-size: cover;
     background-position: bottom right;
     color: rgb(224, 221, 221);
@@ -462,6 +487,8 @@ button:hover a {
 .stats__graph {
     width: 46%;
     height: auto;
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .stats__infos {
@@ -486,7 +513,6 @@ button:hover a {
 
 #team {
     background: url(../../assets//backgrounds/bg7.jpg);
-    background-color: rgb(56, 77, 75);
     background-size: cover;
     color: rgb(224, 221, 221);
 }
@@ -498,22 +524,28 @@ button:hover a {
 .team__text {
     width: 50%;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    background-color: $forest-green;
 }
 
 .team__cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     text-align: initial;
 }
 
 .person-card {
-    background-color: rgba(255,255,255,0.8);
+    background-color: $transparent-white;
     color: black;
     flex: 1 1 0;
     position: relative;
-   
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .person-card::after {
@@ -521,7 +553,7 @@ button:hover a {
     content: '';
     width: 3px;
     height: 100%;
-    background-color: $pink;
+    background-color: $green;
     top: 0;
     right: -12px;
 }
@@ -532,8 +564,29 @@ button:hover a {
 
 .person-card__img {
     width: 50%;
-    border-radius: 10px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 5px;
+    border: 4px solid $green;
 }
+
+.person-card__text {
+    border-top: 1px solid grey;
+    padding: 12px 0;
+}
+
+.person-card__social-networks {
+    margin-top: auto;
+}
+
+.person-card__social-network-img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
 
 /* section contact / formulaire */
 
@@ -541,7 +594,7 @@ button:hover a {
     position: relative;
 }
 
-.map {
+.contact__map {
     position: absolute;
     left: 0;
     right: 0;
@@ -621,9 +674,9 @@ button:hover a {
 }
 
 .footer-top__logo {
-    background-color: grey;
-    padding: 0 30px;
-    height: 100px;
+    background-color: transparent;
+    border-radius: 50%;
+    width: clamp(130px, 40%, 150px);
     margin: auto;
 }
 
@@ -663,6 +716,13 @@ button:hover a {
 
 .footer__link {
     margin-right: 12px;
+    width: max-content;
+}
+
+.footer__detail {
+    display: flex;
+    width: max-content;
+    align-items: center;
 }
 
 
@@ -696,6 +756,23 @@ button:hover a {
     }
 }
 
+@media screen and (max-width: 1100px) {
+    .team__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .person-card::after {
+        height: 3px;
+        width: 100%;
+        top: 102%;
+        left: 0;
+    }
+
+    .person-card:nth-of-type(3):after {
+        height: 0;
+    }
+}
+
 @media screen and (max-width: 960px) {
     .special-offer {
         flex-direction: column;
@@ -705,11 +782,93 @@ button:hover a {
     .special-offer__btn {
         margin: auto;
     }
+
+    .stats__numbers {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .stats__graph {
+        width: 40%;
+    }
+
+    .contact {
+        display: flex;
+        gap: 5%;
+    }
+
+    .contact__map {
+        position: relative;
+        height: 400px;
+    }
+
+    .contact__map, 
+    .form {
+        flex: 1;
+    }
 }
 
 @media screen and (max-width: 750px) {
     .introduction__cards {
         flex-direction: column;
+    }
+
+    .gallery {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(6, 275px);
+        grid-auto-rows: 300px;
+        width: 100%;
+    }
+
+    .gallery__img:nth-child(n) {
+        width: 100%;
+        grid-row: auto;
+        grid-column: 1 / -1;
+    }
+
+    .gallery__ornament {
+        display: none;
+    }
+
+    .team__cards {
+        grid-template-columns: 1fr;
+    }
+
+    .person-card:nth-of-type(3):after {
+        height: 3px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .form {
+        width: 100%;
+        margin: auto;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    .footer__item {
+        position: relative;
+        flex-direction: column;
+    }
+
+    .footer__item::after {
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 1px;
+        background-color: #00f094;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -746,6 +905,62 @@ button:hover a {
 
     .nav__burger-img {
         width: 25px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .stats__graph {
+        width: 100%;
+        aspect-ratio: 2/1;
+        margin-bottom: 20px;
+        min-height: 175px;
+    }
+
+    .stats__infos {
+        align-items: center;
+        text-align: center;
+    }
+
+    .form {
+        order: 1;
+    }
+
+    .contact__map {
+        order: 2;
+    }
+
+    .form__name {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav__list {
+        padding-bottom: 10px;
+        text-align: center;
+        flex-direction: column;
+        width: auto;
+        background-color: $transparent-white;
+    }
+
+    .footer-nav__item {
+        width: max-content;
+        margin: auto;
+        color: black;
+        position: relative;
+        padding: 8px 10px;
+    }
+
+    .footer-nav__item::after {
+        position: absolute;
+        content: "";
+        width: 200px;
+        height: 1px;
+        background-color: $green;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
