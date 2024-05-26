@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-CA">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Médailles Alpine</title>
     <link rel="stylesheet" href="style/css/style.css">
-    <script src="formValidation.js" defer></script>
-    <script src="menu-burger.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png">
+    <script src="scripts/formValidation.js" defer></script>
+    <script src="scripts/menu-burger.js" defer></script>
+    <script src="scripts/hoverManip.js" defer></script>
 </head>
 <body>
     <header id="header" class="section section--light-padding">
         <div class="container header">
-            <a class="header__home-link" href="index.html">
-                ALPINE
-            </a>
+            <div class="header__branding">
+                <a class="header__home-link" href="index.html">
+                    <img class="header__logo" src="assets/logo-accent.png" alt="">
+                    ALPINE
+                </a>
+            </div>
             <nav class="nav nav--desktop">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link nav__link--current" href="#introduction">Concept</a></li>
@@ -51,10 +56,13 @@
         <section id="newsletter" class="section section--border-top">
             <div class="container">
                 <div class="newsletter">
-                    <p class="newsletter__text">Tu veux rejoindre notre newsletter et etre au courant des dernieres noveates ?</p>
-                    <form action="" class="newsletter__form">
-                        <input id="newsletter_email" type="email" class="newsletter__input" placeholder="courriel">
-                        <label for="newsletter_email" class="newsletter__label">courriel</label>
+                    <p class="newsletter__text no-top-margin">Tu veux rejoindre notre newsletter et etre au courant des dernieres noveates ?</p>
+                    <form action="confirmation-envoi.html" class="newsletter__form" onsubmit="return validateNewsletterForm()" novalidate>
+                        <div class="form__input-control">
+                            <input id="newsletter__email" type="email" class="newsletter__input" placeholder="courriel" required>
+                        <label for="newsletter__email" class="newsletter__label">courriel</label>
+                            <div class="form__error-msg"></div>
+                        </div>
                         <button type="submit">Envoyer</button>
                     </form>
                 </div>
@@ -64,7 +72,7 @@
         <section id="special-offer" class="section">
             <div class="container">
                 <div class="special-offer">
-                    <p class="special-offer__text">
+                    <p class="special-offer__text no-top-margin">
                        Concours a l'occasion de la nouvelle collection de Medailles Alpine: devine la forme du nouveau modele et tente de le gagner avec le prenom de ton chien !
                     </p>
                     <button class="button--text-light special-offer__btn">M'inscrire</button>
@@ -120,7 +128,7 @@
         <section id="stats" class="section">
             <div class="container">
                 <div class="stats">
-                    <img class="stats__graph" src="assets/stats.png" alt="">
+                    <img class="stats__graph" src="assets/statsphotolarge.jpg" alt="">
                     <div class="stats__infos">
                         <h2>Nos stats</h2>
                         <p>Un peu de chiffre pour en savoir un peu plus sur la compagnie.</p>
@@ -150,36 +158,53 @@
                             <img class="person-card__img" src="assets/team/maite.webp" alt="">
                             <h4>Maite</h4>
                             <h5>Brel, Ada, Sitka et Juneau</h5>
-                            <p>
+                            <p class="person-card__text">
                                 A la tete de Medailles Alpine, Maite est celle qui confectionne avec amour vos medailles, porte medailles et longes. Elle est aussi en charge de la creation des nouveaux modeles.
                             </p>
                             <div class="person-card__social-networks">
-                                <a href=""><img src="" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
                             </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/audrey.webp" alt="">
                             <h4>Audrey</h4>
                             <h5>Suoris, Bee et Anis</h5>
-                            <p>
+                            <p  class="person-card__text">
                                 Audrey met elle aussi la main a la patte pour la fabrication des medailles et produits connexes. Elle a aussi un role de divertissement pour toute l equipe !
                             </p>
+                            <div class="person-card__social-networks">
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/maude.jpg" alt="">
                             <h4>Maude</h4>
                             <h5>Lydgi, Arthur, Awen et Peche</h5>
-                            <p>
+                            <p  class="person-card__text">
                                 Maude, elle, polit et noirci vos medailles.Elle prepare egalement les colis pour vous les envoyer au plus vite !
                             </p>
+                            <div class="person-card__social-networks">
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/emmy.webp" alt="">
                             <h4>Emmy</h4>
                             <h5>Aslan et Simba</h5>
-                            <p>
+                            <p  class="person-card__text">
                                 Emmy est en charge de la strategie marketing, du site internet et des reseaux sociaux. Elle fait le lien entre vous et nous !
                             </p>
+                            <div class="person-card__social-networks">
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
+                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,34 +212,34 @@
         </section>
 
         <section class="section" id="contact">
-            <div class="container">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form id="form" class="form" onsubmit="return validateForm()" novalidate>
+            <div class="container contact">
+                <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <form id="form" action="confirmation-envoi.html" class="form" onsubmit="return validateContactForm()" novalidate>
                     <h3>Contact</h3>
                     <p class="form__text">Des questions ? Laissez-nous un message, nous reviendrons vers vous entre 2 medailles !</p>
 
                     <div class="form__name">
                         <div class="form__input-control">
                             <label class="form__label form__label--hidden" for="lastName">Nom de famille</label>
-                            <input class="form__input form__input--50" id="lastName" type="text" placeholder="Nom de famille">
+                            <input class="form__input form__input--50" id="lastName" type="text" placeholder="Nom de famille" required>
                             <div class="form__error-msg"></div>
                         </div>
                         <div class="form__input-control">
                             <label class="form__label form__label--hidden" for="firstName">Prenom</label>
-                            <input class="form__input form__input--50" id="firstName" type="text" placeholder="Prenom">
+                            <input class="form__input form__input--50" id="firstName" type="text" placeholder="Prenom" required>
                             <div class="form__error-msg"></div>
                         </div>
                     </div>
 
                     <div class="form__input-control">
                         <label class="form__label form__label--hidden" for="email">Email</label>
-                        <input class="form__input" id="email" type="email" placeholder="Email">
+                        <input class="form__input" id="email" type="email" placeholder="Email" required>
                         <div class="form__error-msg"></div>
                     </div>
 
                     <div class="form__input-control">
                         <label class="form__label form__label--hidden" for="message">Message</label>
-                        <textarea class="form__textarea form__input" id="message" type="text" placeholder="Message"></textarea>
+                        <textarea class="form__textarea form__input" id="message" type="text" placeholder="Message" required></textarea>
                         <div class="form__error-msg"></div>
                     </div>
                         
@@ -225,7 +250,7 @@
     </main>
     <section id="footer-top" class="section">
         <div class="container footer-top">
-            <img class="footer-top__logo" src="assets/logo.png" alt="Logo de la marque">
+            <img class="footer-top__logo" src="assets/logo-accent.png" alt="Logo de la marque">
             <nav class="footer-nav">
                 <ul class="footer-nav__list">
                     <li class="footer-nav__item"><a href="">A propos</a></li>
@@ -239,22 +264,26 @@
         </div>
     </section>
 
-    <footer id="footer" class="section section--no-border">
+    <footer id="footer" class="section section--no-border section--light-padding">
         <div class="container footer">
             <p class="footer__item">Fait par: Jeanne Pietropaoli</p>
             <div class="footer__item footer__item--centered">
                 <ul class="footer__social-networks-list">
-                    <img class="footer__icon" src="assets/facebook.png" alt="">
-                    <img class="footer__icon" src="assets/twitter.png" alt="">
-                    <img class="footer__icon" src="assets/instagram.png" alt="">
-                    <img class="footer__icon" src="assets/linkedin.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/facebook.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/twitter.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/instgram.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/linkedin.png" alt="">
                 </ul>
             </div>
             <address class="footer__item">
-                <img class="footer__icon" src="assets/mobile.png" alt="">
-                <a class="footer__link" href="tel:+5819988915">+581-998-8915</a>
-                <img class="footer__icon" src="assets/mail.png" alt="">
-                <a class="footer__link" href="mailto:medaillesalpine@gmail.com">mediallesalpine@gmail.com</a>
+                <div class="footer__detail">
+                    <img class="footer__icon social-icon" src="assets/social-networks/mobile.png" alt="">
+                    <a class="footer__link" href="tel:+5819988915">+581-998-8915</a>
+                </div>
+                <div class="footer__detail">
+                    <img class="footer__icon social-icon" src="assets/social-networks/mail.png" alt="">
+                    <a class="footer__link" href="mailto:medaillesalpine@gmail.com">mediallesalpine@gmail.com</a>
+                </div>
             </address>
         </div>
     </footer>
