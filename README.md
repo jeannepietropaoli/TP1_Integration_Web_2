@@ -39,3 +39,11 @@ Le but est de créer un site web de type **page unique** pour l'entreprise de no
 * CSS
 * JavaScript
 
+
+// traiter photos
+// validation html
+// valiation css
+// partials pour footer, header etc
+// mixins notamment pour les pseudo-elements
+// relecture / comparer confiramtion.html et index.html
+// importer les partials dans index.css
