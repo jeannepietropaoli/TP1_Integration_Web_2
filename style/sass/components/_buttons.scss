@@ -2,25 +2,26 @@
 @use '../helpers/mixins' as *;
 
 .button {
+    $font-weight: 600;
     display: inline-block;
     background-color: transparent;
     border: 3px solid $green;
     cursor: pointer;
     padding: 12px 30px;
     height: fit-content;
-    color: rgb(102, 102, 102);
+    color: rgb(97, 96, 96);
     width: max-content;
-    font-weight: 500;
+    font-weight: $font-weight;
     position: relative;
     z-index: 1;
-    @include fillOnHover($green, black, 700);
+    @include fillOnHover($green, black, $font-weight);
 
     &--text-light {
         color: white;
     }
 
     &--no-hover  {
-        @include fillOnHover(transparent, black, 700);
+        @include fillOnHover(transparent, black, $font-weight);
     }
 
   

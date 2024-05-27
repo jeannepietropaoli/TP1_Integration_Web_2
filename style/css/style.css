@@ -162,9 +162,9 @@ ul {
   cursor: pointer;
   padding: 12px 30px;
   height: fit-content;
-  color: rgb(102, 102, 102);
+  color: rgb(97, 96, 96);
   width: max-content;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   z-index: 1;
 }
@@ -183,10 +183,10 @@ ul {
 }
 .button:hover {
   color: black;
-  font-weight: 700;
+  font-weight: 600;
 }
 .button:hover::after {
-  width: 100%;
+  width: 101%;
 }
 .button--text-light {
   color: white;
@@ -206,10 +206,10 @@ ul {
 }
 .button--no-hover:hover {
   color: black;
-  font-weight: 700;
+  font-weight: 600;
 }
 .button--no-hover:hover::after {
-  width: 100%;
+  width: 101%;
 }
 
 .section {
