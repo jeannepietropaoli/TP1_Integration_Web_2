@@ -13,10 +13,15 @@
     font-weight: 500;
     position: relative;
     z-index: 2;
+    @include fillOnHover($green, black, 700);
 
     &--text-light {
         color: white;
     }
 
-    @include fillOnHover($green, black, 700);
+    &--no-hover  {
+        @include fillOnHover(transparent, black, 700);
+    }
+
+  
 }
