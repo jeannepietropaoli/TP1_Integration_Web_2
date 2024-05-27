@@ -1,0 +1,18 @@
+.button {
+  display: inline-block;
+  background-color: transparent;
+  border: 3px solid #00f094;
+  cursor: pointer;
+  padding: 12px 30px;
+  height: fit-content;
+  color: grey;
+  width: max-content;
+  font-weight: 500;
+}
+.button--text-light {
+  color: white;
+}
+.button:hover {
+  background-color: #00f094;
+  color: white;
+}/*# sourceMappingURL=buttons.css.map */
