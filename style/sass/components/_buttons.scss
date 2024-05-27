@@ -7,16 +7,36 @@
     cursor: pointer;
     padding: 12px 30px;
     height: fit-content;
-    color: grey;
+    color: rgb(102, 102, 102);
     width: max-content;
     font-weight: 500;
+    position: relative;
+    z-index: 2;
 
     &--text-light {
         color: white;
     }
 
-    &:hover {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 105%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
         background-color: $green;
-        color: white;
+        z-index: -1;
+        transition: width 0.3s;
+        transform-origin: left center;
+    }
+
+    &:hover {
+        color: black;
+        font-weight: 700;
+
+        &::after {
+            width: 100%;
+        }
     }
 }
