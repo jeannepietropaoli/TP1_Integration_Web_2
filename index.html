@@ -11,11 +11,11 @@
     <script src="scripts/hoverManip.js" defer></script>
 </head>
 <body>
-    <a class="screen-reader-txt" href="#main-content"></a>
+    <a class="screen-reader-txt" href="#main-content">Aller au contenu principal</a>
     <header id="header" class="section section--light-padding">
         <div class="container header">
             <div class="header__branding">
-                <a class="header__home-link" href="index.html">
+                <a class="header__home-link" href="index.html" aria-label="accueil">
                     <img class="header__logo" src="assets/logo-accent.png" alt="Logo de Médailles Alpine">
                     ALPINE
                 </a>
@@ -49,14 +49,14 @@
                 <div class="carousel">
                     <!-- le doublon gallery__slider permet de creer l'effet de defilement infini des images de la galerie -->
                     <div class="carousel__slider">
-                        <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
-                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
+                        <img src="assets/carousel/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
+                        <img src="assets/carousel/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
+                        <img src="assets/carousel/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
                     </div>
                     <div class="carousel__slider">
-                        <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
-                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
+                        <img src="assets/carousel/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
+                        <img src="assets/carousel/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
+                        <img src="assets/carousel/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
                     </div>
                 </div>
             </div>
@@ -98,18 +98,18 @@
                     </p>
                     <div class="introduction__cards">
                         <article class="card">
-                            <img class="card__img" src="assets/fait-main.png" alt="icône d'une main">
-                            <h3 class="card__title">Fait à la main au Quebec</h3>
+                            <img class="card__img" src="assets/introduction/fait-main.png" alt="icône d'une main">
+                            <h2 class="card__title">Fait à la main au Quebec</h2>
                             <p>Nos médailles sont entièrement faites <span class="highlight">à la main</span> de façon artisnale à Québec. Tu cherches un produit <span class="highlight">local</span> avec un savoir-faire en arrière ? Ne cherches pas plus loin !</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/choix.png" alt="icône d'un nuancier de couleurs">
-                            <h3 class="card__title">Sur mesure</h3>
+                            <img class="card__img" src="assets/introduction/choix.png" alt="icône d'un nuancier de couleurs">
+                            <h2 class="card__title">Sur mesure</h2>
                             <p>Choisis parmi nos dizaines de modèles préfaits, <span class="highlight">personnalises</span> avec ton choix de police, de couleur et forme de medailles, de couleur d'encre. Psst: toujours pas satisfait ? Shootes nous un message pour demander une médailles custom !</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/garanti.png" alt="icône d'un badge de qualité">
-                            <h3 class="card__title">Unique et durable</h3>
+                            <img class="card__img" src="assets/introduction/garanti.png" alt="icône d'un badge de qualité">
+                            <h2 class="card__title">Unique et durable</h2>
                             <p>Estampées à la main et fabriquées avec des matériaux de <span class="highlight">qualité</span>, nos médailles sont toutes <span class="highlight">uniques</span>, de par le procédé, et durables dans le temps.</p>
                         </article>
                     </div>
@@ -137,7 +137,7 @@
         <section id="stats" class="section">
             <div class="container">
                 <div class="stats">
-                    <img class="stats__graph" src="assets/statsphotolarge.jpg" alt="Photo retouchée d'une médaille transformée en graphique circulaire ">
+                    <img class="stats__graph" src="assets/stats/statsphotolarge.jpg" alt="Photo retouchée d'une médaille transformée en graphique circulaire ">
                     <div class="stats__infos">
                         <h2>Nos stats</h2>
                         <p>Un peu de chiffres pour en savoir un peu plus sur la compagnie.</p>
@@ -165,54 +165,54 @@
                     <div class="team__cards">
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/maite.webp" alt="Photo de Maïté">
-                            <h4>Maïté</h4>
-                            <h5>Brel, Ada, Sitka et Juneau</h5>
+                            <h3>Maïté</h3>
+                            <h4>Brel, Ada, Sitka et Juneau</h4>
                             <p class="person-card__text">
                                 A la tête de Médailles Alpine, Maïté est celle qui confectionne avec amour vos médailles, porte-médailles et longes. Elle est aussi en charge de la création des nouveaux modèles.
                             </p>
                             <div class="person-card__icons">
-                                <a href=""><img class="person-card__icon clcikable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
-                                <a href=""><img class="person-card__icon clcikable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
-                                <a href=""><img class="person-card__icon clcikable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
+                                <a href="" aria-label="facebook"><img class="person-card__icon clcikable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href="" aria-label="twitter"><img class="person-card__icon clcikable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href="" aria-label="instagram"><img class="person-card__icon clcikable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instagram"></a>
                             </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/audrey.webp" alt="Photo d'Audrey">
-                            <h4>Audrey</h4>
-                            <h5>Souris, Bee et Anis</h5>
+                            <h3>Audrey</h3>
+                            <h4>Souris, Bee et Anis</h4>
                             <p  class="person-card__text">
                                 Audrey met elle aussi la main à la patte pour la fabrication des médailles et produits connexes. Elle a aussi un rôle de divertissement pour toute l'équipe !
                             </p>
                             <div class="person-card__icons">
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
+                                <a href="" aria-label="facebook"><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href="" aria-label="twitter"><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href="" aria-label="instagram"><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instagram"></a>
                             </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/maude.jpg" alt="Photo de Maude">
-                            <h4>Maude</h4>
-                            <h5>Lydgi, Arthur, Awen et Pêche</h5>
+                            <h3>Maude</h3>
+                            <h4>Lydgi, Arthur, Awen et Pêche</h4>
                             <p  class="person-card__text">
                                 Maude, elle, polit et noircit vos médailles. Elle prépare également les colis pour vous les envoyer au plus vite !
                             </p>
                             <div class="person-card__icons">
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
+                                <a href="" aria-label="facebook"><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href="" aria-label="twitter"><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href="" aria-label="instagram"><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instagram"></a>
                             </div>
                         </div>
                         <div class="person-card">
                             <img class="person-card__img" src="assets/team/emmy.webp" alt="Photo d'Emmy">
-                            <h4>Emmy</h4>
-                            <h5>Aslan et Simba</h5>
+                            <h3>Emmy</h3>
+                            <h4>Aslan et Simba</h4>
                             <p  class="person-card__text">
                                 Emmy est en charge de la stratégie marketing, du site internet et des réseaux sociaux. Elle fait le lien entre vous et nous !
                             </p>
                             <div class="person-card__icons">
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
-                                <a href=""><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
+                                <a href="" aria-label="facebook"><img class="person-card__icon clickable-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href="" aria-label="twitter"><img class="person-card__icon clickable-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href="" aria-label="instagram"><img class="person-card__icon clickable-icon" src="./assets/social-networks/instgram.png" alt="icône d'instagram"></a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +223,7 @@
         <section class="section" id="contact">
             <div class="container">
                 <div class="contact">
-                    <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Carte de localisation de Médailles Alpine" class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <form id="form" action="confirmation-envoi.html" class="form" onsubmit="return validateContactForm()" novalidate>
                         <h2>Contact</h2>
                         <p class="form__text">Des questions ? Laissez-nous un message, nous reviendrons vers vous entre deux médailles !</p>
@@ -246,7 +246,7 @@
                         </div>
                         <div class="input-control">
                             <label class="input-control__label input-control__label--hidden" for="message">Message</label>
-                            <textarea class="input-control__textarea" id="message" type="text" placeholder="Message" required></textarea>
+                            <textarea class="input-control__textarea" id="message" placeholder="Message" required></textarea>
                             <div class="input-control__error-msg"></div>
                         </div>
                     
@@ -278,12 +278,12 @@
         <div class="container footer">
             <p class="footer__item">Fait par: Jeanne Pietropaoli</p>
             <div class="footer__item footer__item--centered">
-                <ul>
-                    <img class="footer__icon clickable-icon" src="assets/social-networks/facebook.png" alt="icône de facebook">
-                    <img class="footer__icon clickable-icon" src="assets/social-networks/twitter.png" alt="icône de twitter">
-                    <img class="footer__icon clickable-icon" src="assets/social-networks/instgram.png" alt="icône d'instgram">
-                    <img class="footer__icon clickable-icon" src="assets/social-networks/linkedin.png" alt="icône de linkedin">
-                </ul>
+                <div>
+                    <a href="" aria-label="facebook"><img class="footer__icon clickable-icon" src="assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                    <a href="" aria-label="twitter"><img class="footer__icon clickable-icon" src="assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                    <a href="" aria-label="instagram"><img class="footer__icon clickable-icon" src="assets/social-networks/instgram.png" alt="icône d'instagram"></a>
+                    <a href="" aria-label="linkedin"><img class="footer__icon clickable-icon" src="assets/social-networks/linkedin.png" alt="icône de linkedin"></a>
+                </div>
             </div>
             <address class="footer__item">
                 <div class="footer__detail">
