@@ -1,0 +1,30 @@
+#carousel {
+  background: url(../../assets/backgrounds/bg2.jpg);
+  background-size: cover;
+}
+
+.carousel {
+  margin: auto;
+  width: 80%;
+  height: 450px;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 3px solid white;
+}
+.carousel__slider {
+  width: 300%;
+  height: 100%;
+  display: inline-block;
+  animation: sliding 10s linear infinite forwards;
+}
+.carousel__img {
+  width: calc((100% - 10px) / 3);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  padding: 10px;
+  border-radius: 15px;
+}
+.carousel__img--position-bottom {
+  object-position: bottom;
+}/*# sourceMappingURL=carousel.css.map */

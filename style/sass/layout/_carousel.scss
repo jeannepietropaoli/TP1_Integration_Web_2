@@ -1,0 +1,36 @@
+@use '../helpers/animations.scss' as *;
+
+#carousel {
+    background: url(../../assets/backgrounds/bg2.jpg);
+    background-size: cover;
+}
+
+.carousel {
+    margin: auto;
+    width: 80%;
+    height: 450px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 3px solid white;
+
+    &__slider {
+        width: calc(100% * 3);
+        height: 100%;
+        display: inline-block;
+        animation: sliding 10s linear infinite forwards;
+    }
+
+    &__img {
+        $padding: 10px;
+        width: calc((100% - $padding) / 3);
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        padding: $padding;
+        border-radius: 15px;
+
+        &--position-bottom {
+            object-position: bottom;
+        }
+    }
+}
