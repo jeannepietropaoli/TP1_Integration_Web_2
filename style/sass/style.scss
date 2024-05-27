@@ -1,24 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
-/* general */
+/* variables */
 
-$pink: rgb(255, 126, 52);
 $green: #00f094;
 $blue: #384d4b;
 $dark-green: rgb(56, 77, 75);
 $forest-green: rgb(17 33 33);
 $grey: #e4e4e4;
 $transparent-white: rgba(255,255,255,0.8);
+$white: white;
+$padding-carousel-img: 10px;
+$soft-white: rgb(224, 221, 221);
+
+/* général */
 
 * {
     box-sizing: border-box;
-    font-family: "Dosis", sans-serif;
 }
 
-/* permet de decaler le scroll la section afin que rien ne soit cache par le header lorsqu'on clique sur les liens des sections */
 html {
-    scroll-padding-top: 75px;
+    scroll-padding-top: 75px; /* permet de décaler le scroll vertical vers le bas lorsqu'on clique sur les liens des sections afin que rien ne soit caché par le header */
 }
 
 body {
@@ -26,8 +28,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: white;
- 
+    background-color: $white;
 }
 
 main {
@@ -39,6 +40,10 @@ main {
 main > section {
     flex: 1 1 0;
 }
+
+header, footer {
+    background-color: $white;
+}
   
 h1, h2, h3, h4, h5 {
     font-weight: 700;
@@ -46,8 +51,7 @@ h1, h2, h3, h4, h5 {
     font-family: "Roboto Mono", monospace;
   }
   
-p, a, cite, button, blockquote, table, address, ul, li, span, label, input, legend,
-.p-looking {
+p, a, cite, button, blockquote, table, address, ul, li, span, label, input, legend {
     font-family: "Dosis", sans-serif;
     font-size: 1rem;
     font-style: normal;
@@ -60,16 +64,13 @@ a {
     cursor: pointer;
 }
 
-header, footer {
-    background-color: white;
-}
-
-
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
+/* général - classes générales */
   
 .container {
     max-width: 1200px;
@@ -83,6 +84,19 @@ ul {
 
 .social-icon {
     cursor: pointer;
+}
+
+.screen-reader-txt {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal !important;
 }
 
 .highlight {
@@ -128,13 +142,13 @@ ul {
     flex: 1 1 0;
 }
 
-.input-control__input--max-275 {
-    max-width: 275px;
-}
-
 .input-control__textarea {
     @extend .input-control__input;
     height: 100px;
+}
+
+.input-control__input--max-275 {
+    max-width: 275px;
 }
 
 .input-control__input--success {
@@ -181,10 +195,6 @@ ul {
     background-color: $green;
     color: white;
 }
-  
-.button:hover a {
-    color: white;
-}
 
 /* section */ 
 
@@ -197,6 +207,7 @@ ul {
     padding: 10px 0;
 }
 
+/* séparateur de section */
 .section::after {
     position: absolute;
     content: "";
@@ -206,10 +217,6 @@ ul {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-}
-
-.section--light-border::after {
-    background-color: lightgrey;
 }
 
 .section--no-border::after {
@@ -232,14 +239,12 @@ ul {
     align-items: center;
 }
 
+/* header - partie gauche : logo */
+
 .header__home-link {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-.header__logo {
-    height: 35px;
 }
 
 .header__branding {
@@ -247,11 +252,11 @@ ul {
     gap: 20px;
 }
 
-/* header - right part : nav bar */
-
-.nav__burger-button {
-    display: none;
+.header__logo {
+    height: 35px;
 }
+
+/* header - partie droite : navbar */
 
 .nav__item {
     display: inline-block;
@@ -262,6 +267,12 @@ ul {
     min-width: max-content;
 }
 
+.nav__burger-button {
+    display: none;
+    margin: 10px 0 0 0;
+    z-index: 2;
+}
+
 .nav--mobile-burger {
     display: none;
 }
@@ -269,7 +280,7 @@ ul {
 .nav--mobile {
     color: white;
     animation: blend 400ms ease-in-out;
-    position: sticky;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -291,12 +302,7 @@ ul {
     transform: translate(-50%, -50%);
 }
 
-.nav__burger-button {
-    margin: 10px 0 0 0;
-    z-index: 2;
-}
-
-/* carousel d'images */
+/* section carousel d'images */
 
 #carousel {
     background: url(../../assets/backgrounds/bg2.jpg);
@@ -320,11 +326,11 @@ ul {
 }
 
 .carousel__img {
-    width: calc(100% / 3);
+    width: calc((100% - $padding-carousel-img) / 3);
     height: 100%;
     object-fit: cover;
     object-position: center;
-    padding: 10px;
+    padding: $padding-carousel-img;
     border-radius: 15px;
 }
 
@@ -335,7 +341,7 @@ ul {
 /* newsletter */
 
 #newsletter {
-    background-color: #e4e4e4;
+    background-color: $grey;
 }
 
 .newsletter {
@@ -350,18 +356,10 @@ ul {
     align-items: center;
 }
 
-.newsletter__input {
-    width: 100%;
-}
-
-.newsletter__label {
-    display: none;
-}
-
 /* section offres speciales */
 
 #special-offer {
-    background-color: rgb(56, 77, 75);
+    background-color: $dark-green;
     color: white;
 }
 
@@ -370,10 +368,6 @@ ul {
     margin: auto;
     display: flex;
     gap: 10%;
-}
-
-.special-offer__text {
-    flex-grow: 1;
 }
 
 /* section presentation */
@@ -398,6 +392,7 @@ ul {
     z-index: 1;
 }
 
+/* MIXINS avec en param couleur fond, voir height et width pour ajuster la taille du rectangle */
 .introduction__title::before {
     content: "";
     width: 120%;
@@ -422,13 +417,13 @@ ul {
 
 }
 
+/* MIXINS avec en param couleur fond, voir height et width pour ajuster la taille du rectangle */
 .introduction__text::after {
     content: "";
     width: 120%;
     max-width: 95vw;
     height: 120%;
     background-color: $dark-green;
-    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -446,7 +441,7 @@ ul {
     padding: 30px;
     border-radius: 10px;
     background-color: $transparent-white;
-    flex: 1 1 0px;
+    flex: 1 1 0;  /* flex-basis à 0 permet de répartir l'espace de manière égale entre les cartes sans prendre en compte leur contenu */
 }
 
 .card__img {
@@ -459,13 +454,14 @@ ul {
     border: 3px solid $green;
 }
 
+/* gallery */
 
 .gallery {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: 1fr;
-    aspect-ratio: 2/1;  // grid-auto-rows: 1fr et aspcet-ratio: 2/1 permettent d'obtenir la grille du modele sans retoucher le ratio des photos a l'avance
+    aspect-ratio: 2/1;  // grid-auto-rows: 1fr et aspcet-ratio: 2/1 permettent d'obtenir la grille du modèle sans retoucher le ratio des photos en amont
     gap: 15px;
 }
 
@@ -529,7 +525,7 @@ ul {
     background: url(../../assets//backgrounds/bg2reversedark.jpg);
     background-size: cover;
     background-position: bottom right;
-    color: rgb(224, 221, 221);
+    color: $soft-white;
 }
 
 .stats {
@@ -558,7 +554,6 @@ ul {
 }
 
 .stats__number {
-    text-transform: capitalize;
     font-size: 2rem;
     font-weight: 800;
 }
@@ -568,7 +563,7 @@ ul {
 #team {
     background: url(../../assets//backgrounds/bg7.jpg);
     background-size: cover;
-    color: rgb(224, 221, 221);
+    color: $soft-white;
 }
 
 .team {
@@ -599,7 +594,6 @@ ul {
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-
 }
 
 .person-card::after {
@@ -642,7 +636,7 @@ ul {
 }
 
 
-/* section contact / formulaire */
+/* section contact - formulaire */
 
 #contact {
     position: relative;
@@ -698,7 +692,7 @@ ul {
 .footer-top__logo {
     background-color: transparent;
     border-radius: 50%;
-    width: clamp(130px, 40%, 150px);
+    width: clamp(110px, 40%, 150px);
     margin: auto;
 }
 
@@ -747,36 +741,6 @@ ul {
     align-items: center;
 }
 
-
-@keyframes sliding {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(0);
-    }
-
-    33% {
-        transform: translateX(calc(-100% / 3 - 3px));
-    }
-
-    58% {
-        transform: translateX(calc(-100% / 3 - 3px));
-    }
-
-    66% {
-        transform: translateX(calc(-100% / 3 * 2 - 7px));
-    }
-
-    91% {
-        transform: translateX(calc(-100% / 3 * 2 - 7px));
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 @media screen and (max-width: 1100px) {
     .team__cards {
@@ -856,6 +820,10 @@ ul {
 
     .team__cards {
         grid-template-columns: 1fr;
+    }
+
+    .team__text {
+        width: 90%;
     }
 
     .person-card:nth-of-type(3):after {
@@ -994,5 +962,35 @@ ul {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    58% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    66% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    91% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    100% {
+        transform: translateX(-100%);
     }
 }
