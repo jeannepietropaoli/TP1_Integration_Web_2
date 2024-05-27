@@ -1,0 +1,61 @@
+@use '../helpers/variables.scss' as *;
+
+#bottom-page {
+    background: url(../../assets/backgrounds/bg7.jpg);
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+}
+
+.bottom-page {
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        background-color: transparent;
+        border-radius: 50%;
+        width: clamp(110px, 40%, 150px);
+        margin: auto;
+    }
+
+    &__list {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        margin-top: 22px;
+        width: clamp(400px, 80%, 750px);
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .bottom-page {
+        &__list {
+            padding-bottom: 10px;
+            text-align: center;
+            flex-direction: column;
+            width: auto;
+            background-color: $transparent-white;
+        }
+
+        &__link {
+            width: max-content;
+            margin: auto;
+            color: black;
+            position: relative;
+            padding: 8px 10px;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 200px;
+                height: 1px;
+                background-color: $green;
+                bottom: 2px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+
+}

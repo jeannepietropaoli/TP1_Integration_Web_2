@@ -1,0 +1,24 @@
+#bottom-page {
+  background: url(../../assets/backgrounds/bg7.jpg);
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+}
+
+.bottom-page {
+  display: flex;
+  flex-direction: column;
+}
+.bottom-page__logo {
+  background-color: transparent;
+  border-radius: 50%;
+  width: clamp(110px, 40%, 150px);
+  margin: auto;
+}
+.bottom-page__list {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 22px;
+  width: clamp(400px, 80%, 750px);
+}/*# sourceMappingURL=bottom-page.css.map */
