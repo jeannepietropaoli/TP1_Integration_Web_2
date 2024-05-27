@@ -166,7 +166,7 @@ ul {
   width: max-content;
   font-weight: 500;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 .button::after {
   content: "";
