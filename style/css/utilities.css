@@ -1,0 +1,42 @@
+.no-top-margin {
+  margin-top: 0;
+}
+
+.clickable-icon {
+  cursor: pointer;
+}
+
+.screen-reader-txt {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+.underline-on-hover {
+  position: relative;
+  padding: 8px 1px;
+}
+.underline-on-hover::after {
+  transition: width 0.2s ease-in-out;
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 5px;
+  background-color: #00f094;
+}
+.underline-on-hover:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=utilities.css.map */
