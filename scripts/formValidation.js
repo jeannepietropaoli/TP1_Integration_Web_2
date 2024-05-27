@@ -72,21 +72,21 @@ function isMessageValid(messageInput) {
 
 function getErrorMessageElement(input) {
   const parentNode = input.parentElement;
-  return parentNode.querySelector(".form__error-msg");
+  return parentNode.querySelector(".input-control__error-msg");
 }
 
 function setSuccess(input) {
   const errorDisplay = getErrorMessageElement(input);
   errorDisplay.textContent = "";
-  input.classList.remove("form__input--error");
-  input.classList.add("form__input--success");
+  input.classList.remove("input-control__input--error");
+  input.classList.add("input-control__input--success");
 }
 
 function setError(input, errorMessage) {
   const errorDisplay = getErrorMessageElement(input);
   errorDisplay.textContent = errorMessage;
-  input.classList.remove("form__input--success");
-  input.classList.add("form__input--error");
+  input.classList.remove("input-control__input--successs");
+  input.classList.add("input-control__input--error");
 }
 
 function displayFormValidation(input) {
@@ -100,7 +100,6 @@ function displayFormValidation(input) {
 function trackInputsValidation(inputs) {
   inputs.forEach((input) => {
     input.input.addEventListener("input", () => {
-      console.log('track')
       displayFormValidation(input)
     })
   }
@@ -108,7 +107,6 @@ function trackInputsValidation(inputs) {
 }
 
 function validateForm(formInputs) {
-  console.log('here')
   let readyToSend = true;
   readyToSend = formInputs.some(input => !input.validationFunction()) ? false : true
   formInputs.forEach(input => displayFormValidation(input))

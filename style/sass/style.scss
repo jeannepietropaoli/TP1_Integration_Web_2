@@ -57,6 +57,7 @@ a {
     color: inherit;
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
 }
 
 header, footer {
@@ -84,9 +85,83 @@ ul {
     cursor: pointer;
 }
 
+.highlight {
+    font-weight: bold;
+}
+
+.underline-on-hover {
+    position: relative;
+    padding: 8px 1px;
+}
+
+.underline-on-hover::after {
+    transition: width 0.2s ease-in-out;
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: $green;
+}
+
+.underline-on-hover:hover::after {
+    width: 100%;
+}
+
+/* form inputs */
+
+.input-control {
+    width: 100%;
+    flex: 1 1 0;
+}
+
+.input-control--50 {
+    width: 50%;
+}
+
+.input-control__input {
+    padding: 8px 10px;
+    flex: 1;
+    border: 1px solid lightgrey;
+    width: 100%;
+    flex: 1 1 0;
+}
+
+.input-control__input--max-275 {
+    max-width: 275px;
+}
+
+.input-control__textarea {
+    @extend .input-control__input;
+    height: 100px;
+}
+
+.input-control__input--success {
+    border-color: $green;
+}
+
+.input-control__input--error {
+    border-color: red;
+}
+
+.input-control__input::placeholder {
+    font-size: 0.85rem;
+}
+
+.input-control__error-msg {
+    color: red;
+    font-size: 0.7rem;
+    margin-top: 3px;
+}
+
+.input-control__label--hidden {
+    display: none;
+}
+
 /* boutons */
 
-button {
+.button {
     display: inline-block;
     background-color: transparent;
     border: 3px solid $green;
@@ -102,12 +177,12 @@ button {
     color: white;
 }
   
-button:hover {
+.button:hover {
     background-color: $green;
     color: white;
 }
   
-button:hover a {
+.button:hover a {
     color: white;
 }
 
@@ -184,25 +259,7 @@ button:hover a {
 }
   
 .nav__link {
-    position: relative;
-    padding: 8px 1px;
     min-width: max-content;
-}
-  
-.nav__link::after {
-    transition: width 0.2s ease-in-out;
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 5px;
-    background-color: $green;
-}
-  
-.nav__link:hover::after,
-.nav__link.current::after {
-    width: 100%;
 }
 
 .nav--mobile-burger {
@@ -294,9 +351,6 @@ button:hover a {
 }
 
 .newsletter__input {
-    padding: 8px 10px;
-    flex: 1;
-    border: 1px solid lightgrey;
     width: 100%;
 }
 
@@ -577,11 +631,11 @@ button:hover a {
     padding: 12px 0;
 }
 
-.person-card__social-networks {
+.person-card__icons {
     margin-top: auto;
 }
 
-.person-card__social-network-img {
+.person-card__icon {
     width: 20px;
     height: 20px;
     margin-right: 8px;
@@ -621,42 +675,10 @@ button:hover a {
     margin: 0;
 }
 
-.form__label--hidden {
-    display: none;
-}
-
 .form__name {
     display: flex;
     width: 100%;
     gap: 5%;
-}
-
-.form__input-control {
-    width: 100%;
-    flex: 1 1 0;
-}
-
-.form__input {
-    width: 100%;
-    border: 1px solid black;
-}
-
-.form__textarea {
-    height: 100px;
-}
-
-.form__input--success {
-    border-color: green;
-}
-
-.form__input--error {
-    border-color: red;
-}
-
-.form__error-msg {
-    color: red;
-    font-size: 0.7rem;
-    margin-top: 3px;
 }
 
 /* navigation de bas de page */
@@ -711,7 +733,7 @@ button:hover a {
 
 .footer__link,
 .footer__item {
-    font-size: 0.75rem;
+    font-size: 0.93rem;
 }
 
 .footer__link {
@@ -795,6 +817,7 @@ button:hover a {
 
     .contact {
         display: flex;
+        align-items: center;
         gap: 5%;
     }
 
@@ -847,6 +870,11 @@ button:hover a {
     .form {
         width: 100%;
         margin: auto;
+        order: 1;
+    }
+
+    .contact__map {
+        order: 2;
     }
 
     .footer {
@@ -881,7 +909,7 @@ button:hover a {
         flex-direction: column;
     }
 
-    .newsletter__input {
+    .input-control__input-80 {
         width: 80%;
     }
 
@@ -923,17 +951,13 @@ button:hover a {
         text-align: center;
     }
 
-    .form {
-        order: 1;
-    }
-
-    .contact__map {
-        order: 2;
-    }
-
     .form__name {
         flex-direction: column;
         gap: 15px;
+    }
+
+    .input-control--50 {
+        width: 100%;
     }
 
     .footer-nav__list {

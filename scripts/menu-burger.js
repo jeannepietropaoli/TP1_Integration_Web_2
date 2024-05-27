@@ -1,5 +1,4 @@
 const menuBurgerButton = document.querySelector('.nav__burger-button');
-console.log(menuBurgerButton)
 const nav = document.querySelector('.nav--desktop');
 
 menuBurgerButton.addEventListener('click', () => {

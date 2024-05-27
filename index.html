@@ -15,21 +15,29 @@
         <div class="container header">
             <div class="header__branding">
                 <a class="header__home-link" href="index.html">
-                    <img class="header__logo" src="assets/logo-accent.png" alt="">
+                    <img class="header__logo" src="assets/logo-accent.png" alt="Logo de Médailles Alpine">
                     ALPINE
                 </a>
             </div>
             <nav class="nav nav--desktop">
                 <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link nav__link--current" href="#introduction">Concept</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#gallery">Galerie</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#team">Notre équipe</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
+                    <li class="nav__item">
+                        <a class="nav__link underline-on-hover" href="#introduction">Concept</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link underline-on-hover" href="#gallery">Galerie</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link underline-on-hover" href="#team">Notre équipe</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link underline-on-hover" href="#contact">Contact</a>
+                    </li>
                 </ul>
             </nav>
             <nav class="nav--mobile-burger">
-                <button class="nav__burger-button">
-                    <img class="nav__burger-img" src="assets/hamburger.png" alt="bouton acces menu mobile">
+                <button class="nav__burger-button button">
+                    <img class="nav__burger-img" src="assets/hamburger.png" alt="bouton accès menu mobile">
                 </button>
             </nav>
         </div>
@@ -41,29 +49,29 @@
                     <!-- le doublon gallery__slider permet de creer l'effet de defilement infini des images de la galerie -->
                     <div class="carousel__slider">
                         <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.jpg" alt="Photo bac rempli de medailles" class="carousel__img">
-                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick porte" class="carousel__img carousel__img--position-bottom">
+                        <img src="assets/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
+                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
                     </div>
                     <div class="carousel__slider">
                         <img src="assets/banner1.jpg" alt="Photo d'une medaille 'le chien d'une vie'" class="carousel__img">
-                        <img src="assets/banner2.jpg" alt="Photo bac rempli de medailles" class="carousel__img">
-                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick porte" class="carousel__img carousel__img--position-bottom">
+                        <img src="assets/banner2.jpg" alt="Photo d'une médaille en forme d'étoile de shérif et estampée 'police du fun'" class="carousel__img">
+                        <img src="assets/banner3.webp" alt="Photo de la medaille de Maverick, portée" class="carousel__img carousel__img--position-bottom">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="newsletter" class="section section--border-top">
+        <section id="newsletter" class="section">
             <div class="container">
                 <div class="newsletter">
-                    <p class="newsletter__text no-top-margin">Tu veux rejoindre notre newsletter et etre au courant des dernieres noveates ?</p>
+                    <p class="newsletter__text no-top-margin">Tu veux rejoindre notre newsletter et être au courant des dernières nouveautés ?</p>
                     <form action="confirmation-envoi.html" class="newsletter__form" onsubmit="return validateNewsletterForm()" novalidate>
-                        <div class="form__input-control">
-                            <input id="newsletter__email" type="email" class="newsletter__input" placeholder="courriel" required>
-                        <label for="newsletter__email" class="newsletter__label">courriel</label>
-                            <div class="form__error-msg"></div>
+                        <div class="input-control">
+                            <input id="newsletter__email" type="email" class="input-control__input input-control__input--max-275" placeholder="courriel" required>
+                            <label for="newsletter__email" class="input-control__label input-control__label--hidden">courriel</label>
+                            <div class="input-control__error-msg"></div>
                         </div>
-                        <button type="submit">Envoyer</button>
+                        <button type="submit" class="button">Envoyer</button>
                     </form>
                 </div>
             </div>
@@ -73,9 +81,9 @@
             <div class="container">
                 <div class="special-offer">
                     <p class="special-offer__text no-top-margin">
-                       Concours a l'occasion de la nouvelle collection de Medailles Alpine: devine la forme du nouveau modele et tente de le gagner avec le prenom de ton chien !
+                       Concours à l'occasion de la nouvelle collection de Medailles Alpine: devines la forme du nouveau modèle et cours la chance de la gagner avec le prénom de ton chien !
                     </p>
-                    <button class="button--text-light special-offer__btn">M'inscrire</button>
+                    <button class="button--text-light special-offer__btn button">M'inscrire</button>
                 </div>
             </div>
         </section>
@@ -83,25 +91,25 @@
         <section id="introduction" class="section">
             <div class="container">
                 <div class="introduction">
-                    <h1 class="introduction__title">Medailles Alpine</h1>
+                    <h1 class="introduction__title">Médailles Alpine</h1>
                     <p class="introduction__text">
-                        Que se cache derriere Medailles Alpine? Decouvrez en plus sur nous !
+                        Que se cache derrière Médailles Alpine? Découvrez en plus sur nous !
                     </p>
                     <div class="introduction__cards">
                         <article class="card">
-                            <img class="card__img" src="assets/fait-main.png" alt="">
-                            <h3 class="card__title">Fait a la main au Quebec</h3>
-                            <p>Nos medailles nsont entierement faites a la main de facon artisnale a Quebec. Tu cherches un produit <span class="highlight highlight-orange">local</span> avec un savoir-faire en arriere ? Ne cherche pas plus loin</p>
+                            <img class="card__img" src="assets/fait-main.png" alt="icône d'une main">
+                            <h3 class="card__title">Fait à la main au Quebec</h3>
+                            <p>Nos médailles sont entièrement faites <span class="highlight">à la main</span> de façon artisnale à Québec. Tu cherches un produit <span class="highlight">local</span> avec un savoir-faire en arrière ? Ne cherches pas plus loin !</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/choix.png" alt="">
+                            <img class="card__img" src="assets/choix.png" alt="icône d'un nuancier de couleurs">
                             <h3 class="card__title">Sur mesure</h3>
-                            <p>Choisis parmis nos dizaines de modeles prefaits, customize avec ton choix de police, de couleur et forme de medailles, de couleur d'encre. Psst: toujours pas satisfait ? Shoot nous un message pour demander une medailles custom !</p>
+                            <p>Choisis parmi nos dizaines de modèles préfaits, <span class="highlight">personnalises</span> avec ton choix de police, de couleur et forme de medailles, de couleur d'encre. Psst: toujours pas satisfait ? Shootes nous un message pour demander une médailles custom !</p>
                         </article>
                         <article class="card">
-                            <img class="card__img" src="assets/garanti.png" alt="">
+                            <img class="card__img" src="assets/garanti.png" alt="icône d'un badge de qualité">
                             <h3 class="card__title">Unique et durable</h3>
-                            <p>Estampees a la main et fabriquees avec des materiaux de qualite, nos medailles sont toutes uniques de par le procede et durables dans le temps.</p>
+                            <p>Estampées à la main et fabriquées avec des matériaux de <span class="highlight">qualité</span>, nos médailles sont toutes <span class="highlight">uniques</span>, de par le procédé, et durables dans le temps.</p>
                         </article>
                     </div>
                 </div>
@@ -111,12 +119,12 @@
         <section id="gallery" class="section">
             <div class="container">
                 <div class="gallery">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_1.jpg" alt="">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_2.jpg" alt="">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_3.jpg" alt="">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_4.jpg" alt="">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_5.jpg" alt="">
-                    <img class="gallery__img" src="assets/gallery/gallery_photo_6.jpg" alt="">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_1.jpg" alt="Photo zoomée sur une cloche et médaille en forme de champignon sur un collier en biothane">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_2.jpg" alt="Photo d'une médaille pendue à un collier">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_3.jpg" alt="Photo de la médaille de Grizzly, estampée avec un ours">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_4.jpg" alt="Photo de deux médailles en forme d'ours">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_5.jpg" alt="Photo d'un chien de berger portant fièrement une médaille Alpine">
+                    <img class="gallery__img" src="assets/gallery/gallery_photo_6.jpg" alt="Photo de la médaille de Romy estampée avec des montagnes">
                     <div class="gallery__ornament"></div>
                     <div class="gallery__ornament"></div>
                     <div class="gallery__ornament"></div>
@@ -128,21 +136,21 @@
         <section id="stats" class="section">
             <div class="container">
                 <div class="stats">
-                    <img class="stats__graph" src="assets/statsphotolarge.jpg" alt="">
+                    <img class="stats__graph" src="assets/statsphotolarge.jpg" alt="Photo retouchée d'une médaille transformée en graphique circulaire ">
                     <div class="stats__infos">
                         <h2>Nos stats</h2>
-                        <p>Un peu de chiffre pour en savoir un peu plus sur la compagnie.</p>
+                        <p>Un peu de chiffres pour en savoir un peu plus sur la compagnie.</p>
                         <div class="stats__numbers">
                             <div>
                                <div class="stats__number">200</div>
-                               <div>Estampes differentes</div>
+                               <div>Estampes différentes</div>
                             </div>
                             <div>
                                 <div class="stats__number">100%</div>
                                 <div>De clients satisfaits</div>
                             </div>
                         </div>
-                        <button class="stats__button button--text-light">En savoir plus</button>
+                        <button class="button--text-light button">En savoir plus</button>
                     </div>
                 </div>
             </div>
@@ -151,59 +159,59 @@
         <section id="team" class="section">
             <div class="container">
                 <div class="team">
-                    <h2 >Notre equipe</h2>
-                    <p class="team__text">Derriere Medailles alpines et son savoir faire se cache une equipe 100% feminine et passionnee. Passionnee par l'artisanat mais aussi, tout comme vous, des chiens !</p>
+                    <h2 >Notre équipe</h2>
+                    <p class="team__text">Derrière Médailles Alpine et son savoir-faire se cache une equipe 100% féminine et passionnée. Passionnee par l'artisanat mais aussi, tout comme vous, des chiens !</p>
                     <div class="team__cards">
                         <div class="person-card">
-                            <img class="person-card__img" src="assets/team/maite.webp" alt="">
-                            <h4>Maite</h4>
+                            <img class="person-card__img" src="assets/team/maite.webp" alt="Photo de Maïté">
+                            <h4>Maïté</h4>
                             <h5>Brel, Ada, Sitka et Juneau</h5>
                             <p class="person-card__text">
-                                A la tete de Medailles Alpine, Maite est celle qui confectionne avec amour vos medailles, porte medailles et longes. Elle est aussi en charge de la creation des nouveaux modeles.
+                                A la tête de Médailles Alpine, Maïté est celle qui confectionne avec amour vos médailles, porte-médailles et longes. Elle est aussi en charge de la création des nouveaux modèles.
                             </p>
-                            <div class="person-card__social-networks">
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            <div class="person-card__icons">
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
                             </div>
                         </div>
                         <div class="person-card">
-                            <img class="person-card__img" src="assets/team/audrey.webp" alt="">
+                            <img class="person-card__img" src="assets/team/audrey.webp" alt="Photo d'Audrey">
                             <h4>Audrey</h4>
                             <h5>Suoris, Bee et Anis</h5>
                             <p  class="person-card__text">
-                                Audrey met elle aussi la main a la patte pour la fabrication des medailles et produits connexes. Elle a aussi un role de divertissement pour toute l equipe !
+                                Audrey met elle aussi la main à la patte pour la fabrication des médailles et produits connexes. Elle a aussi un rôle de divertissement pour toute l'équipe !
                             </p>
-                            <div class="person-card__social-networks">
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            <div class="person-card__icons">
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
                             </div>
                         </div>
                         <div class="person-card">
-                            <img class="person-card__img" src="assets/team/maude.jpg" alt="">
+                            <img class="person-card__img" src="assets/team/maude.jpg" alt="Photo de Maude">
                             <h4>Maude</h4>
-                            <h5>Lydgi, Arthur, Awen et Peche</h5>
+                            <h5>Lydgi, Arthur, Awen et Pêche</h5>
                             <p  class="person-card__text">
-                                Maude, elle, polit et noirci vos medailles.Elle prepare egalement les colis pour vous les envoyer au plus vite !
+                                Maude, elle, polit et noircit vos médailles. Elle prépare également les colis pour vous les envoyer au plus vite !
                             </p>
-                            <div class="person-card__social-networks">
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            <div class="person-card__icons">
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
                             </div>
                         </div>
                         <div class="person-card">
-                            <img class="person-card__img" src="assets/team/emmy.webp" alt="">
+                            <img class="person-card__img" src="assets/team/emmy.webp" alt="Photo d'Emmy">
                             <h4>Emmy</h4>
                             <h5>Aslan et Simba</h5>
                             <p  class="person-card__text">
-                                Emmy est en charge de la strategie marketing, du site internet et des reseaux sociaux. Elle fait le lien entre vous et nous !
+                                Emmy est en charge de la stratégie marketing, du site internet et des réseaux sociaux. Elle fait le lien entre vous et nous !
                             </p>
-                            <div class="person-card__social-networks">
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/facebook.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/twitter.png" alt=""></a>
-                                <a href=""><img class="person-card__social-network-img social-icon" src="./assets/social-networks/instgram.png" alt=""></a>
+                            <div class="person-card__icons">
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/facebook.png" alt="icône de facebook"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/twitter.png" alt="icône de twitter"></a>
+                                <a href=""><img class="person-card__icon social-icon" src="./assets/social-networks/instgram.png" alt="icône d'instgram"></a>
                             </div>
                         </div>
                     </div>
@@ -212,55 +220,56 @@
         </section>
 
         <section class="section" id="contact">
-            <div class="container contact">
-                <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <form id="form" action="confirmation-envoi.html" class="form" onsubmit="return validateContactForm()" novalidate>
-                    <h3>Contact</h3>
-                    <p class="form__text">Des questions ? Laissez-nous un message, nous reviendrons vers vous entre 2 medailles !</p>
-
-                    <div class="form__name">
-                        <div class="form__input-control">
-                            <label class="form__label form__label--hidden" for="lastName">Nom de famille</label>
-                            <input class="form__input form__input--50" id="lastName" type="text" placeholder="Nom de famille" required>
-                            <div class="form__error-msg"></div>
+            <div class="container">
+                <div class="contact">
+                    <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5464.0779904855535!2d-71.29838062421008!3d46.7838359711261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8972704097311%3A0x9c8f75f381968c47!2s2601%20Rue%20Biencourt%2C%20Qu%C3%A9bec%2C%20QC%20G1V%201H7!5e0!3m2!1sfr!2sca!4v1715651767107!5m2!1sfr!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <form id="form" action="confirmation-envoi.html" class="form" onsubmit="return validateContactForm()" novalidate>
+                        <h2>Contact</h2>
+                        <p class="form__text">Des questions ? Laissez-nous un message, nous reviendrons vers vous entre deux médailles !</p>
+                        <div class="form__name">
+                            <div class="input-control input-control--50">
+                                <label class="input-control__label input-control__label--hidden" for="lastName">Nom de famille</label>
+                                <input class="input-control__input" id="lastName" type="text" placeholder="Nom de famille" required>
+                                <div class="input-control__error-msg"></div>
+                            </div>
+                            <div class="input-control input-control--50">
+                                <label class="input-control__label  input-control__label--hidden" for="firstName">Prénom</label>
+                                <input class="input-control__input" id="firstName" type="text" placeholder="Prenom" required>
+                                <div class="input-control__error-msg"></div>
+                            </div>
                         </div>
-                        <div class="form__input-control">
-                            <label class="form__label form__label--hidden" for="firstName">Prenom</label>
-                            <input class="form__input form__input--50" id="firstName" type="text" placeholder="Prenom" required>
-                            <div class="form__error-msg"></div>
+                        <div class="input-control">
+                            <label class="input-control__label input-control__label--hidden" for="email">Email</label>
+                            <input class="input-control__input" id="email" type="email" placeholder="Email" required>
+                            <div class="input-control__error-msg"></div>
                         </div>
-                    </div>
-
-                    <div class="form__input-control">
-                        <label class="form__label form__label--hidden" for="email">Email</label>
-                        <input class="form__input" id="email" type="email" placeholder="Email" required>
-                        <div class="form__error-msg"></div>
-                    </div>
-
-                    <div class="form__input-control">
-                        <label class="form__label form__label--hidden" for="message">Message</label>
-                        <textarea class="form__textarea form__input" id="message" type="text" placeholder="Message" required></textarea>
-                        <div class="form__error-msg"></div>
-                    </div>
-                        
-                    <button class="form__button button button--text-dark" type="submit">Envoyer</button>
-                </form>
+                        <div class="input-control">
+                            <label class="input-control__label input-control__label--hidden" for="message">Message</label>
+                            <textarea class="input-control__textarea" id="message" type="text" placeholder="Message" required></textarea>
+                            <div class="input-control__error-msg"></div>
+                        </div>
+                    
+                        <button class="button button--text-dark button" type="submit">Envoyer</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
     <section id="footer-top" class="section">
-        <div class="container footer-top">
-            <img class="footer-top__logo" src="assets/logo-accent.png" alt="Logo de la marque">
-            <nav class="footer-nav">
-                <ul class="footer-nav__list">
-                    <li class="footer-nav__item"><a href="">A propos</a></li>
-                    <li class="footer-nav__item"><a href="">Modeles</a></li>
-                    <li class="footer-nav__item"><a href="">Sur mesure</a></li>
-                    <li class="footer-nav__item"><a href="">FAQs</a></li>
-                    <li class="footer-nav__item"><a href="">Engagement</a></li>
-                    <li class="footer-nav__item"><a href="">Revendeurs</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="footer-top">
+                <img class="footer-top__logo" src="assets/logo-accent.png" alt="Logo de la marque">
+                <nav class="footer-nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item underline-on-hover"><a>A propos</a></li>
+                        <li class="footer-nav__item underline-on-hover"><a>Modèles</a></li>
+                        <li class="footer-nav__item underline-on-hover"><a>Sur mesure</a></li>
+                        <li class="footer-nav__item underline-on-hover"><a>FAQs</a></li>
+                        <li class="footer-nav__item underline-on-hover"><a>Engagement</a></li>
+                        <li class="footer-nav__item underline-on-hover"><a>Revendeurs</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </section>
 
@@ -268,20 +277,20 @@
         <div class="container footer">
             <p class="footer__item">Fait par: Jeanne Pietropaoli</p>
             <div class="footer__item footer__item--centered">
-                <ul class="footer__social-networks-list">
-                    <img class="footer__icon social-icon" src="assets/social-networks/facebook.png" alt="">
-                    <img class="footer__icon social-icon" src="assets/social-networks/twitter.png" alt="">
-                    <img class="footer__icon social-icon" src="assets/social-networks/instgram.png" alt="">
-                    <img class="footer__icon social-icon" src="assets/social-networks/linkedin.png" alt="">
+                <ul>
+                    <img class="footer__icon social-icon" src="assets/social-networks/facebook.png" alt="icône de facebook">
+                    <img class="footer__icon social-icon" src="assets/social-networks/twitter.png" alt="icône de twitter">
+                    <img class="footer__icon social-icon" src="assets/social-networks/instgram.png" alt="icône d'instgram">
+                    <img class="footer__icon social-icon" src="assets/social-networks/linkedin.png" alt="icône de linkedin">
                 </ul>
             </div>
             <address class="footer__item">
                 <div class="footer__detail">
-                    <img class="footer__icon social-icon" src="assets/social-networks/mobile.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/mobile.png" alt="icône de téléphone mobile">
                     <a class="footer__link" href="tel:+5819988915">+581-998-8915</a>
                 </div>
                 <div class="footer__detail">
-                    <img class="footer__icon social-icon" src="assets/social-networks/mail.png" alt="">
+                    <img class="footer__icon social-icon" src="assets/social-networks/mail.png" alt="icône d'email">
                     <a class="footer__link" href="mailto:medaillesalpine@gmail.com">mediallesalpine@gmail.com</a>
                 </div>
             </address>
