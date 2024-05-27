@@ -12,7 +12,7 @@
     &__input {
         padding: 8px 10px;
         flex: 1;
-        border: 1px solid lightgrey;
+        border: 1px solid rgb(168, 167, 167);
         width: 100%;
         flex: 1 1 0;
 
@@ -29,7 +29,9 @@
         }
 
         &::placeholder {
-            font-size: 0.85rem;
+            font-size: 0.99rem;
+            color: rgb(68, 68, 68);
+            font-weight: 400;
         }
     }
 

@@ -120,7 +120,7 @@ ul {
 .input-control__input, .input-control__textarea {
   padding: 8px 10px;
   flex: 1;
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(168, 167, 167);
   width: 100%;
   flex: 1 1 0;
 }
@@ -134,7 +134,9 @@ ul {
   border-color: red;
 }
 .input-control__input::placeholder, .input-control__textarea::placeholder {
-  font-size: 0.85rem;
+  font-size: 0.99rem;
+  color: rgb(68, 68, 68);
+  font-weight: 400;
 }
 .input-control__textarea {
   height: 100px;
@@ -160,16 +162,34 @@ ul {
   cursor: pointer;
   padding: 12px 30px;
   height: fit-content;
-  color: grey;
+  color: rgb(102, 102, 102);
   width: max-content;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
 }
 .button--text-light {
   color: white;
 }
-.button:hover {
+.button::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 105%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   background-color: #00f094;
-  color: white;
+  z-index: -1;
+  transition: width 0.3s;
+  transform-origin: left center;
+}
+.button:hover {
+  color: black;
+  font-weight: 700;
+}
+.button:hover::after {
+  width: 100%;
 }
 
 .section {
