@@ -2,7 +2,7 @@
 
 Elève: Jeanne Pietropaoli
 
-## Liens
+## Lien
 
 Repo : https://github.com/jeannepietropaoli/TP1_Integration_Web_2
 
