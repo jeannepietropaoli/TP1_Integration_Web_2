@@ -1,0 +1,22 @@
+@charset "UTF-8";
+.section {
+  position: relative;
+  padding: 45px 0;
+  /* séparateur de section */
+}
+.section::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 4px;
+  background-color: #00f094;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section--light-padding {
+  padding: 10px 0;
+}
+.section--no-border::after {
+  height: 0;
+}/*# sourceMappingURL=section.css.map */
