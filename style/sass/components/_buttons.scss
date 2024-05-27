@@ -1,4 +1,5 @@
 @use '../helpers/variables.scss' as *;
+@use '../helpers/mixins' as *;
 
 .button {
     display: inline-block;
@@ -17,26 +18,5 @@
         color: white;
     }
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 105%;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: $green;
-        z-index: -1;
-        transition: width 0.3s;
-        transform-origin: left center;
-    }
-
-    &:hover {
-        color: black;
-        font-weight: 700;
-
-        &::after {
-            width: 100%;
-        }
-    }
+    @include fillOnHover($green, black, 700);
 }
