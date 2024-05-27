@@ -12,3 +12,28 @@
         z-index: -1;
     }
 }
+
+@mixin fillOnHover($bgColor, $txtColor, $font-weight) {
+    &::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 101%;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $bgColor;
+        z-index: -1;
+        transition: width 0.3s;
+        transform-origin: left center;
+    }
+
+    &:hover {
+        color: $txtColor;
+        font-weight: $font-weight;
+
+        &::after {
+            width: 100%;
+        }
+    }
+}
