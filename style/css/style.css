@@ -168,9 +168,6 @@ ul {
   position: relative;
   z-index: 2;
 }
-.button--text-light {
-  color: white;
-}
 .button::after {
   content: "";
   position: absolute;
@@ -189,6 +186,29 @@ ul {
   font-weight: 700;
 }
 .button:hover::after {
+  width: 100%;
+}
+.button--text-light {
+  color: white;
+}
+.button--no-hover::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 101%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: transparent;
+  z-index: -1;
+  transition: width 0.3s;
+  transform-origin: left center;
+}
+.button--no-hover:hover {
+  color: black;
+  font-weight: 700;
+}
+.button--no-hover:hover::after {
   width: 100%;
 }
 
