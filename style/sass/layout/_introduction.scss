@@ -1,0 +1,66 @@
+@use '../helpers/variables.scss' as *;
+@use '../helpers/mixins' as *;
+
+#introduction {
+    background: url(../../assets/backgrounds/bg3reverse.jpg);
+    background-size: cover;
+    background-position: top right;
+}
+
+.introduction {
+    width: 100%;
+    text-align: center;
+
+    &__title {
+        color: black;
+        font-size: 1.8rem;
+        width: fit-content;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        @include hightlightBg($green, 120%, 90%);
+    }
+
+    &__text {
+        width: 60%;
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+        @include hightlightBg($dark-green, 120%, 120%)
+    }
+
+    &__cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+
+    .card {
+        padding: 30px;
+        border-radius: 10px;
+        background-color: $transparent-white;
+        flex: 1 1 0;  /* flex-basis à 0 permet de répartir l'espace de manière égale entre les cartes sans prendre en compte leur contenu */
+
+        &__img {
+            width: clamp(50px, 25%, 65px);
+            aspect-ratio: 1;
+            background-color: white;
+            padding: 2px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid $green;
+        }
+    }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .introduction {
+        &__cards {
+            flex-direction: column;
+        }
+    }
+}
