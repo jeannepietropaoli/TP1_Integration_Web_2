@@ -1,0 +1,71 @@
+@use '../helpers/variables.scss' as *;
+
+#stats {
+    background: url(../../assets/backgrounds/bg2reversedark.jpg);
+    background-size: cover;
+    background-position: bottom right;
+    color: $white;
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    gap: 8%;
+    
+    &__graph {
+        width: 46%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__numbers {
+        display: flex;
+        gap: 15%;
+        margin-bottom: 20px;
+    }
+
+    &__number {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+    .stats {
+        &__numbers {
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+    
+        &__graph {
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .stats {
+        flex-direction: column;
+
+        &__graph {
+            width: 100%;
+            aspect-ratio: 2/1;
+            margin-bottom: 20px;
+            min-height: 175px;
+        }
+    
+        &__infos {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
