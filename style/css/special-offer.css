@@ -1,0 +1,21 @@
+#special-offer {
+  background-color: rgb(56, 77, 75);
+  color: white;
+}
+
+.special-offer {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap: 10%;
+}
+
+@media screen and (max-width: 960px) {
+  .special-offer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .special-offer__btn {
+    margin: auto;
+  }
+}

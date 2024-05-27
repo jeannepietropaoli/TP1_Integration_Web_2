@@ -1,0 +1,24 @@
+@use '../helpers/variables.scss' as *;
+
+#special-offer {
+    background-color: $dark-green;
+    color: white;
+}
+
+.special-offer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 10%;
+}
+
+@media screen and (max-width: 960px) {
+    .special-offer {
+        flex-direction: column;
+        text-align: center;
+
+        &__btn {
+            margin: auto;
+        }
+    }
+}
