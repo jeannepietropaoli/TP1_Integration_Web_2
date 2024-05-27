@@ -1,0 +1,39 @@
+
+@keyframes blend {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes sliding {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    58% {
+        transform: translateX(calc(-100% / 3));
+    }
+
+    66% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    91% {
+        transform: translateX(calc(-100% / 3 * 2));
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
