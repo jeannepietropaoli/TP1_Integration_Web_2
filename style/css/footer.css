@@ -1,0 +1,27 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer__icon {
+  height: 25px;
+  margin-right: 8px;
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+.footer__item--centered {
+  justify-self: center;
+}
+.footer__link, .footer__item {
+  font-size: 0.93rem;
+}
+.footer__link {
+  margin-right: 12px;
+  width: max-content;
+}
+.footer__detail {
+  display: flex;
+  width: max-content;
+  align-items: center;
+}/*# sourceMappingURL=footer.css.map */
