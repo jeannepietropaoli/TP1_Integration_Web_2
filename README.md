@@ -12,7 +12,7 @@ Le but est de créer un site web de type **page unique** pour l'entreprise de no
 
    * Un peu plus sur l'entreprise choisie:
 
-   Médailles Alpine est une entreprise de confection de médailles (notamment pou chiens) implantée à Québec. Le travail artisanal et la connexion avec le domaine canin en font une de mes entreprises locales favorites. Je n'en dis pas plus, vous en apprendrez assez sur le site !
+   Médailles Alpine est une entreprise de confection de médailles (notamment pour chiens) implantée à Québec. Le travail artisanal et la connexion avec le domaine canin en font une de mes entreprises locales favorites. Je n'en dis pas plus, vous en apprendrez assez sur le site !
 
 ## Apercu      
 
