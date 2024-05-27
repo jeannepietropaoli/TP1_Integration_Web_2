@@ -1,4 +1,4 @@
-const socialIcons = Array.from(document.querySelectorAll('.social-icon'))
+const socialIcons = Array.from(document.querySelectorAll('.clickable-icon'))
 
 socialIcons.forEach(icon => {
     const defaultSrc = icon.getAttribute("src")
