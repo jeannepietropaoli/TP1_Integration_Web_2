@@ -12,7 +12,11 @@ Le but est de créer un site web de type **page unique** pour l'entreprise de no
 
    * Un peu plus sur l'entreprise choisie:
 
-        à venir...
+   Médailles Alpine est une entreprise de confection de médailles (notamment pou chiens) implantée à Québec. Le travail artisanal et la connexion avec le domaine canin en font une de mes entreprises locales favorites. Je n'en dis pas plus, vous en apprendrez assez sur le site !
+
+## Apercu      
+
+<img src="assets/captures/capture-page-entiere.png" alt="[Capture ecran du site" width="700"/>
 
 ## Objectifs
 
@@ -28,22 +32,18 @@ Le but est de créer un site web de type **page unique** pour l'entreprise de no
 
 * ### Fonts :
 
-à venir...
+  * Dosis (principale) [->](https://fonts.google.com/specimen/Dosis?query=dosis)
+  * Roboto (titres) [->](https://fonts.google.com/specimen/Roboto)
+
 
 * ### Palette de couleurs :
 
+J'ai choisi un thème hivernal / forestier qui fitte avec le branding de l'entreprise, très tournée vers le plein air.
+
+<img src="assets/captures/palette.png" alt="Palette de couleurs du site" width="600"/>
 
 ## Technologies utilisées
 
 * HTML
-* CSS
+* SASS
 * JavaScript
-
-
-// traiter photos
-// validation html
-// valiation css
-// partials pour footer, header etc
-// mixins notamment pour les pseudo-elements
-// relecture / comparer confiramtion.html et index.html
-// importer les partials dans index.css
