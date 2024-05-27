@@ -1,0 +1,56 @@
+
+@use '../helpers/variables.scss' as *;
+
+.input-control {
+    width: 100%;
+    flex: 1 1 0;
+
+    &--50 {
+        width: 50%;
+    } 
+    
+    &__input {
+        padding: 8px 10px;
+        flex: 1;
+        border: 1px solid lightgrey;
+        width: 100%;
+        flex: 1 1 0;
+
+        &--max-275 {
+            max-width: 275px;
+        }
+
+        &--success {
+            border-color: $green;
+        }
+
+        &--error {
+            border-color: red;
+        }
+
+        &::placeholder {
+            font-size: 0.85rem;
+        }
+    }
+
+    &__textarea {
+        @extend .input-control__input;
+        height: 100px;
+    }
+
+    &__error-msg {
+        color: red;
+        font-size: 0.7rem;
+        margin-top: 3px;
+    }
+
+    &__label--hidden {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .input-control--50 {
+        width: 100%;
+    }
+}

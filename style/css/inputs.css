@@ -1,0 +1,43 @@
+.input-control {
+  width: 100%;
+  flex: 1 1 0;
+}
+.input-control--50 {
+  width: 50%;
+}
+.input-control__input, .input-control__textarea {
+  padding: 8px 10px;
+  flex: 1;
+  border: 1px solid lightgrey;
+  width: 100%;
+  flex: 1 1 0;
+}
+.input-control__input--max-275 {
+  max-width: 275px;
+}
+.input-control__input--success {
+  border-color: #00f094;
+}
+.input-control__input--error {
+  border-color: red;
+}
+.input-control__input::placeholder, .input-control__textarea::placeholder {
+  font-size: 0.85rem;
+}
+.input-control__textarea {
+  height: 100px;
+}
+.input-control__error-msg {
+  color: red;
+  font-size: 0.7rem;
+  margin-top: 3px;
+}
+.input-control__label--hidden {
+  display: none;
+}
+
+@media screen and (max-width: 570px) {
+  .input-control--50 {
+    width: 100%;
+  }
+}/*# sourceMappingURL=inputs.css.map */
