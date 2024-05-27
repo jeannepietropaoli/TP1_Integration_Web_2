@@ -1,0 +1,14 @@
+#newsletter {
+  background-color: #e4e4e4;
+}
+
+.newsletter {
+  width: clamp(350px, 45%, 800px);
+  margin: auto;
+  text-align: center;
+}
+.newsletter__form {
+  display: flex;
+  gap: clamp(10px, 5%, 50px);
+  align-items: center;
+}/*# sourceMappingURL=newsletter.css.map */
