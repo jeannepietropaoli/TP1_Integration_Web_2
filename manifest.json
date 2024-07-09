@@ -1,0 +1,21 @@
+{
+    "name": "Medailles Alpine - Shop",
+    "short_name": "Alpine",
+    "icons": [{
+        "src": "./assets/icons/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any maskable"
+    },
+    {
+        "src": "./assets/icons/android-chorme-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any maskable"
+    }],
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "rgb(0, 240, 148)",
+    "description": "Boutique en ligne des Medailles Alpine"
+}
