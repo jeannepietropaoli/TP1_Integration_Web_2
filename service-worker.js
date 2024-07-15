@@ -22,6 +22,14 @@ self.addEventListener("install", (evt) => {
 
 // Activation
 self.addEventListener("activate", (evt) => {
+    // Precache static resources here.
+    evt.waitUntil(
+        caches.open(CACHE_NAME).then((cache) => {
+        console.log('[ServiceWorker] Pre-caching offline page');
+        return cache.addAll(FILES_TO_CACHE);
+        })
+        );
+        self.skipWaiting();
   console.log("[ServiceWorker] Activate");
   //Remove previous cached data from disk.
   self.clients.claim();
