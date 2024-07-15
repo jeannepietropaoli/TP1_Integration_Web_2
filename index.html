@@ -17,6 +17,18 @@
     <meta name="description" content="Boutique en ligne des Medailles Alpine">
     <meta name="theme-color" content="#00f094" />
 
+    <script>
+        // Register service worker.
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+            navigator.serviceWorker.register('service-worker.js')
+            .then((reg) => {
+            console.log('Service worker registered.', reg);
+            });
+            });
+        }
+   
+    </script>
 </head>
 <body>
     <a class="screen-reader-txt" href="#main-content">Aller au contenu principal</a>
