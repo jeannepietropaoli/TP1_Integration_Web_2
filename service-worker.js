@@ -4,7 +4,7 @@ const CACHE_NAME = "static-cache-v1";
 //Add list of files to cache here.
 const FILES_TO_CACHE = [
     'offline.html',
-    'index.html'
+  
 ];
 
 // Installation - fait suelement une fois, premiere ouverture du site (installation du service worker)
