@@ -22,6 +22,14 @@ self.addEventListener("install", (evt) => {
 
 // Activation
 self.addEventListener("activate", (evt) => {
+    
+  console.log("[ServiceWorker] Activate");
+  //Remove previous cached data from disk.
+  self.clients.claim();
+});
+
+//Acces aux ressources
+self.addEventListener("fetch", (evt) => {
     // Precache static resources here.
     evt.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
@@ -30,13 +38,6 @@ self.addEventListener("activate", (evt) => {
         })
         );
         self.skipWaiting();
-  console.log("[ServiceWorker] Activate");
-  //Remove previous cached data from disk.
-  self.clients.claim();
-});
-
-//Acces aux ressources
-self.addEventListener("fetch", (evt) => {
   console.log("[ServiceWorker] Fetch", evt.request.url);
   //Add fetch event handler here.
 });
