@@ -9,7 +9,6 @@ const FILES_TO_CACHE = [
 
 // Installation - fait suelement une fois, premiere ouverture du site (installation du service worker)
 self.addEventListener("install", (evt) => {
-    console.log('[ServiceWorker] Install');
     // Precache static resources here.
     evt.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -18,11 +17,11 @@ self.addEventListener("install", (evt) => {
     })
     );
     self.skipWaiting();
+    console.log('[ServiceWorker] Install');
 });
 
 // Activation -  a chaque ouverture du site / app
 self.addEventListener('activate', (evt) => {
-    console.log('[ServiceWorker] Activate');
     //Remove previous cached data from disk.
     evt.waitUntil(
     caches.keys().then((keyList) => {
@@ -36,6 +35,7 @@ self.addEventListener('activate', (evt) => {
     })
     );
     self.clients.claim();
+    console.log('[ServiceWorker] Activate');
    })
 
 //Acces aux ressources
